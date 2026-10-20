@@ -1,0 +1,466 @@
+{
+  "Programming Languages": {
+    "Python": [
+      "python",
+      "python3",
+      "py",
+      "cpython"
+    ],
+    "Java": [
+      "java",
+      "core java",
+      "java8",
+      "java 11",
+      "j2ee"
+    ],
+    "C++": [
+      "c++",
+      "cpp",
+      "modern c++"
+    ],
+    "C": [
+      "c programming",
+      "c language"
+    ],
+    "C#": [
+      "c#",
+      "csharp",
+      ".net",
+      "dotnet"
+    ],
+    "JavaScript": [
+      "javascript",
+      "js",
+      "es6",
+      "vanilla js"
+    ],
+    "TypeScript": [
+      "typescript",
+      "ts"
+    ],
+    "Go": [
+      "golang",
+      "go language"
+    ],
+    "Rust": [
+      "rust",
+      "rustlang"
+    ],
+    "R": [
+      "r language",
+      "r programming",
+      "rstudio"
+    ],
+    "SQL": [
+      "sql",
+      "structured query language",
+      "ansi sql",
+      "plsql",
+      "t-sql"
+    ],
+    "Scala": [
+      "scala"
+    ],
+    "Bash": [
+      "bash",
+      "shell scripting",
+      "shell",
+      "sh",
+      "zsh"
+    ]
+  },
+  "Data Science & Analytics": {
+    "Pandas": [
+      "pandas",
+      "pd"
+    ],
+    "NumPy": [
+      "numpy",
+      "np"
+    ],
+    "SciPy": [
+      "scipy"
+    ],
+    "Exploratory Data Analysis": [
+      "eda",
+      "exploratory data analysis",
+      "data exploration",
+      "data inspection"
+    ],
+    "Data Cleaning": [
+      "data cleaning",
+      "data wrangling",
+      "data preprocessing",
+      "data imputation"
+    ],
+    "Statistics": [
+      "statistics",
+      "statistical analysis",
+      "probability",
+      "hypothesis testing",
+      "inferential statistics",
+      "statistical modeling"
+    ],
+    "Matplotlib": [
+      "matplotlib",
+      "pyplot"
+    ],
+    "Seaborn": [
+      "seaborn",
+      "sns"
+    ],
+    "Plotly": [
+      "plotly",
+      "cufflinks",
+      "interactive charts"
+    ],
+    "Tableau": [
+      "tableau",
+      "tableau desktop"
+    ],
+    "Power BI": [
+      "power bi",
+      "powerbi",
+      "dax",
+      "power query"
+    ],
+    "Excel": [
+      "excel",
+      "advanced excel",
+      "vlookup",
+      "pivot tables",
+      "excel formulas"
+    ],
+    "A/B Testing": [
+      "a/b testing",
+      "ab testing",
+      "experimentation",
+      "split testing"
+    ]
+  },
+  "Machine Learning": {
+    "Scikit-Learn": [
+      "scikit-learn",
+      "sklearn"
+    ],
+    "Supervised Learning": [
+      "supervised learning",
+      "regression",
+      "classification",
+      "linear regression",
+      "logistic regression"
+    ],
+    "Unsupervised Learning": [
+      "unsupervised learning",
+      "clustering",
+      "k-means",
+      "hierarchical clustering",
+      "dbscan"
+    ],
+    "Random Forest": [
+      "random forest",
+      "decision trees",
+      "extra trees"
+    ],
+    "XGBoost": [
+      "xgboost",
+      "gradient boosting",
+      "lightgbm",
+      "catboost",
+      "gbm"
+    ],
+    "Feature Engineering": [
+      "feature engineering",
+      "feature selection",
+      "dimensionality reduction",
+      "pca",
+      "t-sne"
+    ],
+    "Model Evaluation": [
+      "model evaluation",
+      "cross-validation",
+      "roc-auc",
+      "precision-recall",
+      "f1-score",
+      "hyperparameter tuning"
+    ],
+    "Recommender Systems": [
+      "recommender systems",
+      "recommendation systems",
+      "collaborative filtering",
+      "content-based filtering"
+    ],
+    "Time Series Analysis": [
+      "time series",
+      "arima",
+      "prophet",
+      "forecasting",
+      "sarima"
+    ],
+    "Explainable AI": [
+      "explainable ai",
+      "xai",
+      "shap",
+      "lime",
+      "feature attribution"
+    ]
+  },
+  "Deep Learning & AI": {
+    "PyTorch": [
+      "pytorch",
+      "torch",
+      "torchvision"
+    ],
+    "TensorFlow": [
+      "tensorflow",
+      "tf",
+      "tf.keras"
+    ],
+    "Keras": [
+      "keras"
+    ],
+    "Neural Networks": [
+      "neural networks",
+      "ann",
+      "deep learning",
+      "multilayer perceptron"
+    ],
+    "Convolutional Neural Networks": [
+      "cnn",
+      "convolutional neural networks",
+      "computer vision",
+      "opencv",
+      "object detection",
+      "yolo"
+    ],
+    "Recurrent Neural Networks": [
+      "rnn",
+      "lstm",
+      "gru"
+    ],
+    "Transformers": [
+      "transformers",
+      "attention mechanism",
+      "hugging face",
+      "huggingface",
+      "bert",
+      "roberta"
+    ],
+    "Natural Language Processing": [
+      "nlp",
+      "natural language processing",
+      "spacy",
+      "nltk",
+      "text processing",
+      "tokenization",
+      "lemmatization"
+    ],
+    "Large Language Models": [
+      "llm",
+      "llms",
+      "large language models",
+      "langchain",
+      "rag",
+      "retrieval-augmented generation",
+      "prompt engineering",
+      "llamaindex"
+    ],
+    "Vector Databases": [
+      "vector search",
+      "faiss",
+      "chromadb",
+      "pinecone",
+      "milvus",
+      "qdrant"
+    ]
+  },
+  "MLOps & Big Data": {
+    "Apache Spark": [
+      "spark",
+      "pyspark",
+      "apache spark",
+      "spark streaming"
+    ],
+    "Apache Kafka": [
+      "kafka",
+      "apache kafka",
+      "event streaming",
+      "message broker"
+    ],
+    "Hadoop": [
+      "hadoop",
+      "hdfs",
+      "mapreduce"
+    ],
+    "MLflow": [
+      "mlflow",
+      "experiment tracking",
+      "model registry"
+    ],
+    "Airflow": [
+      "airflow",
+      "apache airflow",
+      "workflow orchestration",
+      "etl pipelines"
+    ],
+    "Docker": [
+      "docker",
+      "containerization",
+      "docker compose",
+      "containers",
+      "dockerfile"
+    ],
+    "Kubernetes": [
+      "kubernetes",
+      "k8s",
+      "container orchestration"
+    ],
+    "Model Deployment": [
+      "model deployment",
+      "model serving",
+      "triton",
+      "torchserve",
+      "onnx",
+      "fastapi serving"
+    ]
+  },
+  "Cloud & DevOps": {
+    "AWS": [
+      "aws",
+      "amazon web services",
+      "s3",
+      "ec2",
+      "lambda",
+      "sagemaker",
+      "cloudwatch"
+    ],
+    "Google Cloud": [
+      "gcp",
+      "google cloud",
+      "bigquery",
+      "vertex ai",
+      "cloud storage"
+    ],
+    "Azure": [
+      "azure",
+      "microsoft azure",
+      "azure ml",
+      "azure devops"
+    ],
+    "CI/CD": [
+      "ci/cd",
+      "continuous integration",
+      "github actions",
+      "jenkins",
+      "gitlab ci"
+    ],
+    "Git": [
+      "git",
+      "github",
+      "version control",
+      "gitlab",
+      "bitbucket"
+    ],
+    "Linux": [
+      "linux",
+      "unix",
+      "ubuntu",
+      "centos",
+      "terminal",
+      "bash"
+    ]
+  },
+  "Web & Software Engineering": {
+    "FastAPI": [
+      "fastapi",
+      "asgi"
+    ],
+    "Flask": [
+      "flask",
+      "wsgi"
+    ],
+    "Django": [
+      "django",
+      "django rest framework",
+      "drf"
+    ],
+    "React": [
+      "react",
+      "react.js",
+      "reactjs",
+      "react native"
+    ],
+    "Node.js": [
+      "node",
+      "node.js",
+      "nodejs"
+    ],
+    "Express": [
+      "express",
+      "express.js"
+    ],
+    "REST APIs": [
+      "rest api",
+      "restful apis",
+      "rest",
+      "api development",
+      "json api",
+      "endpoint"
+    ],
+    "GraphQL": [
+      "graphql",
+      "apollo"
+    ],
+    "HTML/CSS": [
+      "html",
+      "html5",
+      "css",
+      "css3",
+      "tailwind",
+      "bootstrap",
+      "sass"
+    ],
+    "Data Structures & Algorithms": [
+      "dsa",
+      "data structures",
+      "algorithms",
+      "competitive programming",
+      "leetcode",
+      "problem solving"
+    ],
+    "System Design": [
+      "system design",
+      "microservices",
+      "software architecture",
+      "scalability",
+      "load balancing"
+    ]
+  },
+  "Database Systems": {
+    "PostgreSQL": [
+      "postgresql",
+      "postgres",
+      "psql"
+    ],
+    "MySQL": [
+      "mysql",
+      "mariadb"
+    ],
+    "MongoDB": [
+      "mongodb",
+      "nosql",
+      "mongo",
+      "document db"
+    ],
+    "Redis": [
+      "redis",
+      "caching",
+      "in-memory database"
+    ],
+    "Elasticsearch": [
+      "elasticsearch",
+      "elk stack",
+      "opensearch"
+    ]
+  }
+}

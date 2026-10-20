@@ -1,0 +1,3107 @@
+[
+  {
+    "id": "job-001",
+    "title": "Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Razorpay",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Razorpay (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-002",
+    "title": "Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Wipro",
+    "location": "Hyderabad, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Wipro (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-003",
+    "title": "Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "CRED",
+    "location": "Remote",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at CRED (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-004",
+    "title": "Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "NVIDIA",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at NVIDIA (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-005",
+    "title": "Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Microsoft",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Microsoft (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-006",
+    "title": "Associate Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Microsoft",
+    "location": "Mumbai, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Microsoft (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-007",
+    "title": "Junior Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Infosys",
+    "location": "Mumbai, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Infosys (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-008",
+    "title": "Senior Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Wipro",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Wipro (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-009",
+    "title": "Lead Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Wipro",
+    "location": "Pune, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Wipro (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-010",
+    "title": "Associate Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Amazon",
+    "location": "Hyderabad, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Amazon (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-011",
+    "title": "Lead Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Razorpay",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Razorpay (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-012",
+    "title": "Lead Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Meesho",
+    "location": "Remote",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Meesho (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-013",
+    "title": "Lead Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Salesforce",
+    "location": "Mumbai, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Salesforce (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-014",
+    "title": "Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Razorpay",
+    "location": "Hyderabad, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Razorpay (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-015",
+    "title": "Lead Data Scientist",
+    "role": "Data Scientist",
+    "category": "Data Science",
+    "company": "Flipkart",
+    "location": "Mumbai, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b98,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Pandas",
+      "Scikit-Learn",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "AWS",
+      "Docker",
+      "Explainable AI"
+    ],
+    "description": "Looking for a Data Scientist to analyze complex datasets, build predictive machine learning models, and derive actionable business intelligence. You will conduct exploratory data analysis, feature engineering, and deploy models using Python and Scikit-Learn. As a member of our team at Flipkart (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Machine Learning, Pandas."
+  },
+  {
+    "id": "job-016",
+    "title": "Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "NVIDIA",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI",
+      "MLOps"
+    ],
+    "preferred_skills": [
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at NVIDIA (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-017",
+    "title": "Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Oracle",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI"
+    ],
+    "preferred_skills": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at Oracle (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-018",
+    "title": "Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Amazon",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI"
+    ],
+    "preferred_skills": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at Amazon (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-019",
+    "title": "Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "PhonePe",
+    "location": "Pune, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI",
+      "MLOps"
+    ],
+    "preferred_skills": [
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at PhonePe (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-020",
+    "title": "Lead Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Google",
+    "location": "Hyderabad, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI"
+    ],
+    "preferred_skills": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at Google (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-021",
+    "title": "Associate Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Jio",
+    "location": "Remote",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI"
+    ],
+    "preferred_skills": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at Jio (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-022",
+    "title": "Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Paytm",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI",
+      "MLOps"
+    ],
+    "preferred_skills": [
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at Paytm (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-023",
+    "title": "Senior Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "PhonePe",
+    "location": "Mumbai, India",
+    "min_experience_years": 3,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI"
+    ],
+    "preferred_skills": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at PhonePe (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-024",
+    "title": "Senior Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Cisco",
+    "location": "Remote",
+    "min_experience_years": 3,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI"
+    ],
+    "preferred_skills": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at Cisco (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-025",
+    "title": "Associate Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "CRED",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI",
+      "MLOps"
+    ],
+    "preferred_skills": [
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at CRED (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-026",
+    "title": "Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Jio",
+    "location": "Pune, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI"
+    ],
+    "preferred_skills": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at Jio (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-027",
+    "title": "Associate Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Uber",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI"
+    ],
+    "preferred_skills": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at Uber (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-028",
+    "title": "Senior Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Cisco",
+    "location": "Bengaluru, India",
+    "min_experience_years": 3,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI",
+      "MLOps"
+    ],
+    "preferred_skills": [
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at Cisco (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-029",
+    "title": "Senior Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "InMobi",
+    "location": "Pune, India",
+    "min_experience_years": 3,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI"
+    ],
+    "preferred_skills": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at InMobi (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-030",
+    "title": "Machine Learning Engineer",
+    "role": "Machine Learning Engineer",
+    "category": "Artificial Intelligence",
+    "company": "BrowserStack",
+    "location": "Hyderabad, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b910,00,000 - \u20b924,00,000",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "PyTorch",
+      "Docker",
+      "Scikit-Learn",
+      "FastAPI"
+    ],
+    "preferred_skills": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "MLflow",
+      "Transformers"
+    ],
+    "description": "Seeking an ML Engineer to take prototypes to production. You will design, train, evaluate, and deploy scalable ML and Deep Learning architectures with PyTorch and containerize microservices using Docker and Kubernetes. As a member of our team at BrowserStack (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Machine Learning, PyTorch, Docker."
+  },
+  {
+    "id": "job-031",
+    "title": "Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Uber",
+    "location": "Hyderabad, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Uber (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-032",
+    "title": "Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Zomato",
+    "location": "Hyderabad, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Zomato (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-033",
+    "title": "Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Intel",
+    "location": "Hyderabad, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Intel (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-034",
+    "title": "Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "CRED",
+    "location": "Remote",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at CRED (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-035",
+    "title": "Senior Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Accenture",
+    "location": "Bengaluru, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Accenture (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-036",
+    "title": "Senior Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Flipkart",
+    "location": "Bengaluru, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Flipkart (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-037",
+    "title": "Junior Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Tiger Analytics",
+    "location": "Hyderabad, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Tiger Analytics (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-038",
+    "title": "Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Accenture",
+    "location": "Hyderabad, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Accenture (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-039",
+    "title": "Associate Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Jio",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Jio (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-040",
+    "title": "Associate Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "PhonePe",
+    "location": "Pune, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at PhonePe (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-041",
+    "title": "Lead Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Fractal Analytics",
+    "location": "Pune, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Fractal Analytics (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-042",
+    "title": "Associate Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Mu Sigma",
+    "location": "Hyderabad, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Mu Sigma (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-043",
+    "title": "Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Intel",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Intel (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-044",
+    "title": "Senior Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Wipro",
+    "location": "Hyderabad, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Wipro (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-045",
+    "title": "Junior Data Analyst",
+    "role": "Data Analyst",
+    "category": "Data Analytics",
+    "company": "Google",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 0,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b95,00,000 - \u20b911,00,000",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Data Cleaning",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Pandas",
+      "A/B Testing"
+    ],
+    "description": "Join our team as a Data Analyst to transform raw enterprise data into meaningful dashboards and reports. Must be proficient in advanced SQL queries, Power BI or Tableau visualization, and statistical reporting. As a member of our team at Google (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: SQL, Excel, Power BI, Tableau."
+  },
+  {
+    "id": "job-046",
+    "title": "AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Paytm",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning",
+      "Large Language Models"
+    ],
+    "preferred_skills": [
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Paytm (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-047",
+    "title": "AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Mu Sigma",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "Large Language Models",
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Mu Sigma (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-048",
+    "title": "AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "BrowserStack",
+    "location": "Remote",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "Large Language Models",
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at BrowserStack (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-049",
+    "title": "AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Uber",
+    "location": "Mumbai, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning",
+      "Large Language Models"
+    ],
+    "preferred_skills": [
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Uber (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-050",
+    "title": "Lead AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Infosys",
+    "location": "Pune, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "Large Language Models",
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Infosys (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-051",
+    "title": "Junior AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Wipro",
+    "location": "Mumbai, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "Large Language Models",
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Wipro (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-052",
+    "title": "Associate AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Zomato",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning",
+      "Large Language Models"
+    ],
+    "preferred_skills": [
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Zomato (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-053",
+    "title": "Senior AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Salesforce",
+    "location": "Hyderabad, India",
+    "min_experience_years": 3,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "Large Language Models",
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Salesforce (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-054",
+    "title": "Junior AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Wipro",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "Large Language Models",
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Wipro (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-055",
+    "title": "Junior AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Oracle",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning",
+      "Large Language Models"
+    ],
+    "preferred_skills": [
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Oracle (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-056",
+    "title": "Lead AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Paytm",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "Large Language Models",
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Paytm (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-057",
+    "title": "Junior AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Paytm",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "Large Language Models",
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Paytm (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-058",
+    "title": "Senior AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Salesforce",
+    "location": "Mumbai, India",
+    "min_experience_years": 3,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning",
+      "Large Language Models"
+    ],
+    "preferred_skills": [
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Salesforce (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-059",
+    "title": "Associate AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Uber",
+    "location": "Mumbai, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "Large Language Models",
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Uber (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-060",
+    "title": "Junior AI Research Engineer",
+    "role": "AI Research Engineer",
+    "category": "Artificial Intelligence",
+    "company": "Amazon",
+    "location": "Hyderabad, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b914,00,000 - \u20b930,00,000",
+    "required_skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "Large Language Models",
+      "Vector Databases",
+      "Git",
+      "Hugging Face"
+    ],
+    "description": "We are seeking an AI Research Engineer to experiment with cutting-edge Transformer architectures, fine-tune LLMs, and develop RAG pipelines for semantic search and generative intelligence. As a member of our team at Amazon (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, PyTorch, Transformers, Natural Language Processing."
+  },
+  {
+    "id": "job-061",
+    "title": "MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Google",
+    "location": "Remote",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow",
+      "Airflow"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Google (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-062",
+    "title": "MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Tiger Analytics",
+    "location": "Remote",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Tiger Analytics (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-063",
+    "title": "MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Jio",
+    "location": "Pune, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Jio (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-064",
+    "title": "MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Intel",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow",
+      "Airflow"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Intel (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-065",
+    "title": "Junior MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Microsoft",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Microsoft (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-066",
+    "title": "MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "NVIDIA",
+    "location": "Pune, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at NVIDIA (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-067",
+    "title": "MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Razorpay",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow",
+      "Airflow"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Razorpay (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-068",
+    "title": "Senior MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Deloitte",
+    "location": "Bengaluru, India",
+    "min_experience_years": 3,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Deloitte (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-069",
+    "title": "MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Oracle",
+    "location": "Pune, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Oracle (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-070",
+    "title": "Associate MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Ola",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow",
+      "Airflow"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Ola (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-071",
+    "title": "MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Jio",
+    "location": "Mumbai, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Jio (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-072",
+    "title": "Lead MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Flipkart",
+    "location": "Mumbai, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Flipkart (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-073",
+    "title": "Associate MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Accenture",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow",
+      "Airflow"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Accenture (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-074",
+    "title": "Associate MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Paytm",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Paytm (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-075",
+    "title": "Associate MLOps Engineer",
+    "role": "MLOps Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Jio",
+    "location": "Remote",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b912,00,000 - \u20b926,00,000",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "MLflow"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Linux",
+      "Git",
+      "Model Deployment"
+    ],
+    "description": "Responsible for automating continuous integration and deployment pipelines for ML models, tracking experiments using MLflow, and orchestrating container workloads on AWS Kubernetes clusters. As a member of our team at Jio (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, Docker, Kubernetes, CI/CD."
+  },
+  {
+    "id": "job-076",
+    "title": "Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Fractal Analytics",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB",
+      "TypeScript"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Fractal Analytics (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-077",
+    "title": "Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Infosys",
+    "location": "Remote",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Infosys (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-078",
+    "title": "Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "CRED",
+    "location": "Pune, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at CRED (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-079",
+    "title": "Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Ola",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB",
+      "TypeScript"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Ola (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-080",
+    "title": "Junior Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Uber",
+    "location": "Hyderabad, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Uber (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-081",
+    "title": "Junior Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Google",
+    "location": "Pune, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Google (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-082",
+    "title": "Junior Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Wipro",
+    "location": "Hyderabad, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB",
+      "TypeScript"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Wipro (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-083",
+    "title": "Associate Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "PhonePe",
+    "location": "Bengaluru, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at PhonePe (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-084",
+    "title": "Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Ola",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Ola (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-085",
+    "title": "Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "InMobi",
+    "location": "Mumbai, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB",
+      "TypeScript"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at InMobi (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-086",
+    "title": "Lead Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Cisco",
+    "location": "Remote",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Cisco (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-087",
+    "title": "Associate Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Fractal Analytics",
+    "location": "Remote",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Fractal Analytics (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-088",
+    "title": "Senior Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Adobe",
+    "location": "Hyderabad, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB",
+      "TypeScript"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Adobe (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-089",
+    "title": "Lead Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Jio",
+    "location": "Bengaluru, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Jio (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-090",
+    "title": "Lead Full Stack Developer",
+    "role": "Full Stack Developer",
+    "category": "Software Engineering",
+    "company": "Ola",
+    "location": "Mumbai, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b96,00,000 - \u20b916,00,000",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "HTML/CSS",
+      "MongoDB"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "Git"
+    ],
+    "description": "Looking for a Full Stack Developer to build high-performance web applications using React on the frontend and Node.js / Express on the backend, connecting with MongoDB and relational databases. As a member of our team at Ola (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: JavaScript, React, Node.js, REST APIs."
+  },
+  {
+    "id": "job-091",
+    "title": "Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Paytm",
+    "location": "Pune, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git",
+      "Redis"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Paytm (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-092",
+    "title": "Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Wipro",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Wipro (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-093",
+    "title": "Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Zomato",
+    "location": "Mumbai, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Zomato (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-094",
+    "title": "Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Razorpay",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git",
+      "Redis"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Razorpay (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-095",
+    "title": "Senior Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "PhonePe",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at PhonePe (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-096",
+    "title": "Junior Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Jio",
+    "location": "Pune, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Jio (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-097",
+    "title": "Senior Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "CRED",
+    "location": "Hyderabad, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git",
+      "Redis"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at CRED (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-098",
+    "title": "Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Mu Sigma",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Mu Sigma (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-099",
+    "title": "Senior Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Ola",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Ola (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-100",
+    "title": "Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "CRED",
+    "location": "Hyderabad, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git",
+      "Redis"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at CRED (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-101",
+    "title": "Lead Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "PhonePe",
+    "location": "Remote",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at PhonePe (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-102",
+    "title": "Junior Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Deloitte",
+    "location": "Hyderabad, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Deloitte (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-103",
+    "title": "Associate Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Jio",
+    "location": "Bengaluru, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git",
+      "Redis"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Jio (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-104",
+    "title": "Associate Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Wipro",
+    "location": "Pune, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Wipro (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-105",
+    "title": "Junior Backend Engineer (Python)",
+    "role": "Backend Engineer (Python)",
+    "category": "Software Engineering",
+    "company": "Deloitte",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 1,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b97,00,000 - \u20b918,00,000",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "REST APIs",
+      "Docker",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Redis",
+      "Linux",
+      "CI/CD",
+      "System Design"
+    ],
+    "description": "Develop robust, scalable backend microservices using FastAPI, optimize database queries on PostgreSQL, build Redis caching layers, and deploy services via Docker. As a member of our team at Deloitte (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, FastAPI, PostgreSQL, REST APIs."
+  },
+  {
+    "id": "job-106",
+    "title": "Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Accenture",
+    "location": "Mumbai, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop",
+      "Apache Kafka"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Accenture (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-107",
+    "title": "Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Intel",
+    "location": "Hyderabad, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop"
+    ],
+    "preferred_skills": [
+      "Apache Kafka",
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Intel (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-108",
+    "title": "Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Flipkart",
+    "location": "Hyderabad, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop"
+    ],
+    "preferred_skills": [
+      "Apache Kafka",
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Flipkart (Hyderabad, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-109",
+    "title": "Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Cisco",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop",
+      "Apache Kafka"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Cisco (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-110",
+    "title": "Senior Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "TCS",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 3,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop"
+    ],
+    "preferred_skills": [
+      "Apache Kafka",
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at TCS (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-111",
+    "title": "Senior Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "TCS",
+    "location": "Bengaluru, India",
+    "min_experience_years": 3,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop"
+    ],
+    "preferred_skills": [
+      "Apache Kafka",
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at TCS (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-112",
+    "title": "Senior Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "InMobi",
+    "location": "Pune, India",
+    "min_experience_years": 3,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop",
+      "Apache Kafka"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at InMobi (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-113",
+    "title": "Lead Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Intel",
+    "location": "Mumbai, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop"
+    ],
+    "preferred_skills": [
+      "Apache Kafka",
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Intel (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-114",
+    "title": "Lead Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Infosys",
+    "location": "Remote",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop"
+    ],
+    "preferred_skills": [
+      "Apache Kafka",
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Infosys (Remote), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-115",
+    "title": "Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Microsoft",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop",
+      "Apache Kafka"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Microsoft (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-116",
+    "title": "Lead Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Meesho",
+    "location": "Mumbai, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop"
+    ],
+    "preferred_skills": [
+      "Apache Kafka",
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Meesho (Mumbai, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-117",
+    "title": "Junior Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Deloitte",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop"
+    ],
+    "preferred_skills": [
+      "Apache Kafka",
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Deloitte (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-118",
+    "title": "Junior Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Razorpay",
+    "location": "Pune, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop",
+      "Apache Kafka"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Razorpay (Pune, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-119",
+    "title": "Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "Fractal Analytics",
+    "location": "Bengaluru, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop"
+    ],
+    "preferred_skills": [
+      "Apache Kafka",
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at Fractal Analytics (Bengaluru, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  },
+  {
+    "id": "job-120",
+    "title": "Junior Big Data Engineer",
+    "role": "Big Data Engineer",
+    "category": "DevOps & Big Data",
+    "company": "TCS",
+    "location": "Delhi NCR, India",
+    "min_experience_years": 2,
+    "education": "B.Tech / B.E. / M.Sc / MCA in Computer Science, Data Science or related field",
+    "salary_range": "\u20b99,00,000 - \u20b920,00,000",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Airflow",
+      "Hadoop"
+    ],
+    "preferred_skills": [
+      "Apache Kafka",
+      "AWS",
+      "Scala",
+      "PostgreSQL"
+    ],
+    "description": "Architect and manage large-scale distributed data processing pipelines using PySpark, orchestrate batch workflows with Apache Airflow, and stream real-time events with Kafka. As a member of our team at TCS (Delhi NCR, India), you will collaborate with cross-functional engineers to drive business value. Key technologies: Python, SQL, Apache Spark, Airflow."
+  }
+]

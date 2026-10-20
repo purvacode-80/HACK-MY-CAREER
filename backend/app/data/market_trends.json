@@ -1,0 +1,151 @@
+{
+  "top_demanded_skills": [
+    {
+      "skill": "Python",
+      "demand_percentage": 88,
+      "growth_yoy": "+18%",
+      "domain": "Data Science & AI"
+    },
+    {
+      "skill": "SQL",
+      "demand_percentage": 76,
+      "growth_yoy": "+12%",
+      "domain": "Data & Databases"
+    },
+    {
+      "skill": "Machine Learning",
+      "demand_percentage": 72,
+      "growth_yoy": "+24%",
+      "domain": "AI"
+    },
+    {
+      "skill": "Docker",
+      "demand_percentage": 65,
+      "growth_yoy": "+31%",
+      "domain": "DevOps & Cloud"
+    },
+    {
+      "skill": "AWS",
+      "demand_percentage": 61,
+      "growth_yoy": "+20%",
+      "domain": "Cloud"
+    },
+    {
+      "skill": "PyTorch",
+      "demand_percentage": 54,
+      "growth_yoy": "+45%",
+      "domain": "Deep Learning"
+    },
+    {
+      "skill": "FastAPI",
+      "demand_percentage": 49,
+      "growth_yoy": "+38%",
+      "domain": "Backend"
+    },
+    {
+      "skill": "Power BI",
+      "demand_percentage": 46,
+      "growth_yoy": "+15%",
+      "domain": "Analytics"
+    },
+    {
+      "skill": "Kubernetes",
+      "demand_percentage": 42,
+      "growth_yoy": "+28%",
+      "domain": "DevOps"
+    },
+    {
+      "skill": "Transformers",
+      "demand_percentage": 39,
+      "growth_yoy": "+65%",
+      "domain": "GenAI"
+    }
+  ],
+  "salary_by_role": [
+    {
+      "role": "AI Research Engineer",
+      "entry_level_lpa": 12.5,
+      "mid_level_lpa": 22.0,
+      "senior_level_lpa": 38.0
+    },
+    {
+      "role": "Machine Learning Engineer",
+      "entry_level_lpa": 9.5,
+      "mid_level_lpa": 18.5,
+      "senior_level_lpa": 32.0
+    },
+    {
+      "role": "Data Scientist",
+      "entry_level_lpa": 8.0,
+      "mid_level_lpa": 16.0,
+      "senior_level_lpa": 28.0
+    },
+    {
+      "role": "MLOps Engineer",
+      "entry_level_lpa": 10.0,
+      "mid_level_lpa": 19.0,
+      "senior_level_lpa": 30.0
+    },
+    {
+      "role": "Data Analyst",
+      "entry_level_lpa": 5.0,
+      "mid_level_lpa": 9.5,
+      "senior_level_lpa": 15.0
+    },
+    {
+      "role": "Backend Engineer",
+      "entry_level_lpa": 6.5,
+      "mid_level_lpa": 14.0,
+      "senior_level_lpa": 25.0
+    },
+    {
+      "role": "Full Stack Developer",
+      "entry_level_lpa": 6.0,
+      "mid_level_lpa": 13.5,
+      "senior_level_lpa": 24.0
+    },
+    {
+      "role": "Big Data Engineer",
+      "entry_level_lpa": 8.5,
+      "mid_level_lpa": 16.5,
+      "senior_level_lpa": 27.0
+    }
+  ],
+  "role_skill_overlap": [
+    {
+      "role": "Data Scientist",
+      "ml_overlap": 92,
+      "devops_overlap": 45,
+      "backend_overlap": 60,
+      "analytics_overlap": 88
+    },
+    {
+      "role": "ML Engineer",
+      "ml_overlap": 95,
+      "devops_overlap": 78,
+      "backend_overlap": 82,
+      "analytics_overlap": 65
+    },
+    {
+      "role": "Data Analyst",
+      "ml_overlap": 40,
+      "devops_overlap": 20,
+      "backend_overlap": 30,
+      "analytics_overlap": 95
+    },
+    {
+      "role": "AI Research Engineer",
+      "ml_overlap": 98,
+      "devops_overlap": 55,
+      "backend_overlap": 50,
+      "analytics_overlap": 60
+    },
+    {
+      "role": "Full Stack Dev",
+      "ml_overlap": 25,
+      "devops_overlap": 60,
+      "backend_overlap": 95,
+      "analytics_overlap": 40
+    }
+  ]
+}

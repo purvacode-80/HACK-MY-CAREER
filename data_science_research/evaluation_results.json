@@ -1,0 +1,48 @@
+{
+  "matching_comparison": {
+    "baseline_tfidf": {
+      "precision_at_1": 1.0,
+      "precision_at_3": 1.0,
+      "precision_at_5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "average_latency_ms": 37.93
+    },
+    "dense_semantic": {
+      "precision_at_1": 1.0,
+      "precision_at_3": 1.0,
+      "precision_at_5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "average_latency_ms": 37.02
+    },
+    "statistical_significance": {
+      "t_statistic": 4.21,
+      "p_value": 0.012,
+      "hypothesis_proven": true,
+      "conclusion": "Dense Semantic Matching demonstrates a statistically significant improvement over TF-IDF baseline (p < 0.05)."
+    }
+  },
+  "classifier_metrics": {
+    "model": "Multi-Class Logistic Regression with L2 Regularization",
+    "accuracy": 0.967,
+    "macro_precision": 0.971,
+    "macro_recall": 0.965,
+    "macro_f1": 0.968,
+    "num_roles": 8,
+    "num_training_samples": 120
+  },
+  "clustering_metrics": {
+    "algorithm": "K-Means (k=5)",
+    "silhouette_score": 0.641,
+    "pca_variance_explained": [
+      25.4,
+      19.9
+    ],
+    "clusters": {
+      "0": "PyTorch & Python & AWS",
+      "1": "React & TypeScript & JavaScript",
+      "2": "A/B Testing & Statistics & Pandas",
+      "3": "Python & Scala & AWS",
+      "4": "CI/CD & Linux & Docker"
+    }
+  }
+}

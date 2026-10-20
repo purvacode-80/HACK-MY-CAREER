@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hack My Career | AI Resume & Career Intelligence</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ================================================================= -->
+  <!-- 1. ACADIA PRE-DASHBOARD AUTHENTICATION GATEWAY (SIGN-IN / SIGN-UP) -->
+  <!-- ================================================================= -->
+  <div id="auth-gateway" class="auth-gateway-screen">
+    <!-- Acadia Portal Top Bar -->
+    <div class="gateway-topbar">
+      <div class="gateway-brand">
+        <div class="logo-icon">⚡</div>
+        <div>
+          <span class="logo-title">Hack My Career</span>
+          <span class="portal-tag">Student & Engineering Portal</span>
+        </div>
+      </div>
+      <div class="gateway-topbar-right">
+        <span class="db-pill" id="gateway-db-status">🍃 Database: MongoDB Atlas (Connected)</span>
+      </div>
+    </div>
+
+    <!-- Acadia Gateway Hero + Auth Split -->
+    <div class="gateway-body">
+      <!-- Left Hero Column -->
+      <div class="gateway-hero">
+        <div class="acadia-pill-badge">
+          <span>🎓 STUDENT CAREER INTELLIGENCE & RESUME PLATFORM</span>
+        </div>
+        <h1 class="gateway-title">
+          Empowering Your Career with <span>Precision AI</span>
+        </h1>
+        <p class="gateway-subtitle">
+          Transform your resume and academic coursework into explainable career intelligence. Benchmark against <strong>120+ verified engineering roles</strong>, detect skill gaps, simulate career moves, and generate step-by-step personalized learning roadmaps.
+        </p>
+
+        <!-- Acadia 4 Value Cards -->
+        <div class="gateway-feature-grid">
+          <div class="feature-item">
+            <div class="feature-icon">🎯</div>
+            <div>
+              <strong>5-Factor Explainable Match</strong>
+              <p>Semantic vector cosine, direct skills, seniority, and degree alignment.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📄</div>
+            <div>
+              <strong>100% Dynamic Resume Parsing</strong>
+              <p>Automatic NLP extraction of candidate contact, skills, and capstone projects.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⚡</div>
+            <div>
+              <strong>Interactive What-If Simulator</strong>
+              <p>Acquire missing skills to predict immediate match elevation in real time.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🍃</div>
+            <div>
+              <strong>MongoDB Atlas Cloud Vault</strong>
+              <p>Persistent storage for accounts, credentials, and uploaded resumes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Acadia Stat Counters -->
+        <div class="gateway-stats-bar">
+          <div class="stat-cell">
+            <span class="stat-number">120+</span>
+            <span class="stat-label">Tech Postings</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-number">70+</span>
+            <span class="stat-label">Canonical Skills</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-number">5-Factor</span>
+            <span class="stat-label">Explainable Model</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Dynamic Parsing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Auth Card Column -->
+      <div class="gateway-auth-box">
+        <div class="auth-card">
+          <div class="auth-card-header">
+            <div class="auth-badge-icon">🔐</div>
+            <h2 id="auth-title">Welcome to Hack My Career</h2>
+            <p id="auth-desc">Sign in to access your personal resume analytics dashboard</p>
+          </div>
+
+          <!-- Tabs: Sign In / Create Account -->
+          <div class="auth-tabs">
+            <button class="auth-tab-btn active" id="tab-btn-login" onclick="setAuthMode('login')">
+              Sign In
+            </button>
+            <button class="auth-tab-btn" id="tab-btn-signup" onclick="setAuthMode('signup')">
+              Create Account
+            </button>
+          </div>
+
+          <!-- Auth Form -->
+          <form id="gateway-auth-form" onsubmit="handleAuthSubmit(event)">
+            <div class="auth-group" id="name-input-group" style="display:none;">
+              <label class="auth-label">Full Name</label>
+              <input type="text" id="auth-name-input" class="auth-field" placeholder="e.g. Alex Morgan">
+            </div>
+
+            <div class="auth-group">
+              <label class="auth-label">Email Address</label>
+              <input type="email" id="auth-email-input" class="auth-field" placeholder="e.g. student@college.edu" required>
+            </div>
+
+            <div class="auth-group">
+              <label class="auth-label">Password</label>
+              <input type="password" id="auth-password-input" class="auth-field" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="auth-submit-button">
+              <span>Sign In to Dashboard</span> ➔
+            </button>
+          </form>
+
+          <!-- Evaluation / Demo Instant Access -->
+          <div class="auth-divider">
+            <span>EVALUATION / DEMO INSTANT ACCESS</span>
+          </div>
+          <button class="btn btn-demo-access" onclick="quickDemoLogin()">
+            <span>⚡ Instant Demo Access (Demo Student Account)</span>
+          </button>
+          <p class="auth-footnote">
+            🍃 Powered by MongoDB Atlas database for user credentials and resume history.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================================================================= -->
+  <!-- 2. MAIN APPLICATION DASHBOARD (SHOWN AFTER SIGN IN)              -->
+  <!-- ================================================================= -->
+  <div id="dashboard-wrapper" style="display:none;">
+    
+    <!-- Top Ribbon (Acadia Style) -->
+    <div class="top-ribbon">
+      <div class="top-ribbon-left">
+        <span>🚀 <strong>Hack My Career</strong> • Intelligent Career & Resume Analytics</span>
+      </div>
+      <div class="top-ribbon-right">
+        <span id="db-status-badge">🍃 Database: MongoDB Atlas (Connected)</span>
+        <span style="opacity: 0.5;">|</span>
+        <span>Engineering Student Edition 2026</span>
+      </div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="app-header">
+      <div class="logo-badge" onclick="switchTab('tab-resume')">
+        <div class="logo-icon">⚡</div>
+        <div>
+          <div class="logo-title">Hack My Career</div>
+          <div class="logo-subtitle">Career Intelligence Platform</div>
+        </div>
+      </div>
+      
+      <div class="header-right">
+        <div class="meta-pill" id="active-profile-pill">
+          No Resume Uploaded
+        </div>
+        <div class="user-profile-badge" id="user-header-chip">
+          <div class="user-avatar" id="user-avatar-text">U</div>
+          <span id="user-display-name">Candidate</span>
+          <button class="btn-logout" onclick="logoutUser()" title="Sign out of account">Sign Out</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs-container">
+      <button class="tab-btn active" onclick="switchTab('tab-resume')">
+        📄 Resume Intelligence & ATS
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-matching')">
+        🎯 Job Matching & Skill Gap
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-simulator')">
+        ⚡ What-If Simulator
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-roadmap')">
+        🗺️ Learning Roadmap
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-market')">
+        📊 Market Analytics & Clusters
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-history')">
+        📂 My Saved Resumes (MongoDB)
+      </button>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+      
+      <!-- ========================================== -->
+      <!-- TAB 1: RESUME INTELLIGENCE & ATS           -->
+      <!-- ========================================== -->
+      <section id="tab-resume" class="tab-pane active">
+        <div class="grid-2">
+          <!-- Module 1: Upload Card -->
+          <div class="card">
+            <div class="card-title">
+              <span>Upload Candidate Resume</span>
+              <span class="badge badge-neutral">PDF / DOCX Supported</span>
+            </div>
+            
+            <div class="dropzone" id="resume-dropzone" onclick="document.getElementById('file-upload-input').click()">
+              <div class="dropzone-icon">📥</div>
+              <h3>Drag & Drop Resume (PDF or DOCX)</h3>
+              <p style="color:var(--text-muted); font-size: 0.85rem; margin-top:0.25rem;">Or click here to browse files on your computer</p>
+              <input type="file" id="file-upload-input" style="display:none" accept=".pdf,.docx,.txt" onchange="handleFileUpload(event)">
+            </div>
+          </div>
+
+          <!-- Module 2: Target Job Role & Custom Job Description Matcher -->
+          <div class="card">
+            <div class="card-title">
+              <span>Target Job Role & Custom Job Description</span>
+              <span class="badge badge-neutral" id="custom-jd-status-badge">Paste Text or Upload</span>
+            </div>
+
+            <!-- Role Selector -->
+            <div style="margin-bottom:0.75rem;">
+              <label style="font-size:0.8rem; font-weight:600; color:var(--text-muted); display:block; margin-bottom:0.3rem;">
+                SELECT TARGET ROLE TO APPLY:
+              </label>
+              <select id="custom-target-role" class="chat-input" style="width:100%;" onchange="handleTargetRoleChange()">
+                <option value="Data Scientist">Data Scientist</option>
+                <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                <option value="Data Analyst">Data Analyst</option>
+                <option value="AI Research Engineer">AI Research Engineer</option>
+                <option value="MLOps Engineer">MLOps Engineer</option>
+                <option value="Full Stack Developer">Full Stack Developer</option>
+                <option value="Backend Engineer (Python)">Backend Engineer</option>
+                <option value="Big Data Engineer">Big Data Engineer</option>
+              </select>
+            </div>
+
+            <!-- Job Description Input: Paste or Upload PDF/DOCX/PPT -->
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+                <label style="font-size:0.8rem; font-weight:600; color:var(--text-muted);">
+                  JOB DESCRIPTION (PASTE OR UPLOAD):
+                </label>
+                <button class="sample-btn" style="padding:0.2rem 0.5rem; font-size:0.75rem;" onclick="document.getElementById('jd-file-upload-input').click()">
+                  📎 Upload File (PDF/DOCX/PPT)
+                </button>
+                <input type="file" id="jd-file-upload-input" style="display:none" accept=".pdf,.docx,.ppt,.pptx,.txt" onchange="handleJdFileUpload(event)">
+              </div>
+              
+              <textarea id="custom-jd-text" class="chat-input" rows="4" style="width:100%; resize:vertical; font-family:inherit; font-size:0.85rem;" placeholder="Paste job description requirements, or upload a PDF, DOCX, or PPT presentation..."></textarea>
+            </div>
+
+            <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
+              <button class="btn" style="flex:1; justify-content:center;" onclick="matchCustomJobDescription()">
+                🎯 Match Resume with this Job
+              </button>
+              <button class="btn btn-secondary" style="padding:0.65rem 0.9rem;" onclick="clearCustomJd()" title="Clear">
+                ✕
+              </button>
+            </div>
+
+            <!-- Instant Custom Match Result Box -->
+            <div id="custom-match-result-box" style="display:none; margin-top:0.75rem; background:rgba(0,0,0,0.3); border:1px solid var(--border); border-radius:var(--radius-sm); padding:0.85rem;">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <strong id="custom-result-title" style="color:white; font-size:0.95rem;">Match Result</strong>
+                  <div id="custom-result-role" style="font-size:0.75rem; color:var(--text-muted);">Target: Data Scientist</div>
+                </div>
+                <div class="job-match-pill" id="custom-result-score" style="font-size:1.1rem; padding:0.3rem 0.75rem;">88.5%</div>
+              </div>
+              <div style="margin-top:0.5rem; font-size:0.8rem;">
+                <span style="color:#34d399; font-weight:600;">Matched:</span> <span id="custom-matched-count" style="color:#cbd5e1;"></span> &bull; 
+                <span style="color:#f87171; font-weight:600;">Missing:</span> <span id="custom-missing-count" style="color:#cbd5e1;"></span>
+              </div>
+              <div style="display:flex; gap:0.5rem; margin-top:0.6rem; flex-wrap:wrap;">
+                <button class="sample-btn" style="background:var(--primary); border-color:var(--primary);" onclick="viewCustomJobInMatchingTab()">🔍 View Full Breakdown</button>
+                <button class="sample-btn" onclick="openSimulatorForCustomJob()">⚡ Simulate In What-If</button>
+                <button class="sample-btn" onclick="openRoadmapForCustomJob()">🗺️ Roadmap</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ATS Resume Completeness Health Card -->
+        <div class="card" style="margin-top:1.5rem;">
+          <div class="card-title">
+            <span>ATS Resume Completeness Health</span>
+            <span class="badge badge-neutral" id="ats-badge">Awaiting Upload</span>
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-around; flex-wrap:wrap; gap:1.5rem;">
+            <div class="gauge-container">
+              <svg class="gauge-svg" width="140" height="140">
+                <circle class="gauge-circle-bg" cx="70" cy="70" r="54"></circle>
+                <circle class="gauge-circle-progress" id="ats-gauge-circle" cx="70" cy="70" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29"></circle>
+              </svg>
+              <div class="gauge-text-val" id="ats-score-text">0</div>
+              <div class="gauge-text-sub" style="position:absolute; bottom:25px;">/ 100</div>
+            </div>
+
+            <div style="flex:1; min-width:260px;">
+              <div class="metric-row">
+                <div class="metric-header">
+                  <span>Contact & Links Integrity</span>
+                  <span id="metric-contact-val">--</span>
+                </div>
+                <div class="metric-bar-bg"><div class="metric-bar-fill" id="metric-contact-bar" style="width:0%"></div></div>
+              </div>
+              <div class="metric-row">
+                <div class="metric-header">
+                  <span>Extracted Skills Density</span>
+                  <span id="metric-skills-val">--</span>
+                </div>
+                <div class="metric-bar-bg"><div class="metric-bar-fill" id="metric-skills-bar" style="width:0%"></div></div>
+              </div>
+              <div class="metric-row">
+                <div class="metric-header">
+                  <span>Project Depth & Technical Validation</span>
+                  <span id="metric-proj-val">--</span>
+                </div>
+                <div class="metric-bar-bg"><div class="metric-bar-fill" id="metric-proj-bar" style="width:0%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- CANDIDATE PROFILE MODULE: DYNAMIC PROFILE EXTRACTED FROM USER'S RESUME   -->
+        <!-- Shows placeholder data until user uploads or loads their own resume       -->
+        <!-- ========================================================================= -->
+        <div class="card candidate-profile-card" id="profile-card">
+          <div class="profile-card-header">
+            <span class="profile-card-header-title">Structured Candidate Profile Extracted by NLP Engine</span>
+            <span class="badge badge-filename-pill" id="profile-source-badge">Awaiting Resume Upload</span>
+          </div>
+
+          <!-- Top Row: Candidate Details (3 columns) -->
+          <div class="profile-meta-grid">
+            <div class="profile-meta-cell">
+              <div class="meta-field-label">CANDIDATE NAME</div>
+              <div class="meta-field-value-primary" id="cand-name">Alex R. Morgan (Placeholder)</div>
+            </div>
+            <div class="profile-meta-cell">
+              <div class="meta-field-label">CONTACT & INSTITUTION</div>
+              <div class="meta-field-value" id="cand-contact">alex.morgan@domain.com • +91-9876543210 • Institute of Technology</div>
+            </div>
+            <div class="profile-meta-cell">
+              <div class="meta-field-label">SENIORITY / EXPERIENCE</div>
+              <div class="meta-field-value" id="cand-exp">Undergraduate Student • Fresher (Upload resume to extract)</div>
+            </div>
+          </div>
+
+          <!-- Middle Row: Canonical Technical Skills Badges -->
+          <div class="profile-section-block">
+            <div class="profile-section-heading">
+              EXTRACTED CANONICAL TECHNICAL SKILLS (<span id="cand-skills-count">6</span>)
+            </div>
+            <div class="badge-group profile-skills-badges" id="cand-skills-badges">
+              <span class="badge badge-neutral">Python</span>
+              <span class="badge badge-neutral">SQL</span>
+              <span class="badge badge-neutral">Data Structures & Algorithms</span>
+              <span class="badge badge-neutral">Git</span>
+              <span class="badge badge-neutral">Problem Solving</span>
+              <span class="badge badge-neutral">Database Management</span>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Extracted Portfolio & Capstone Projects -->
+          <div class="profile-section-block">
+            <div class="profile-section-heading">
+              EXTRACTED PORTFOLIO & CAPSTONE PROJECTS
+            </div>
+            <div id="cand-projects-list" class="profile-projects-container">
+              <div class="cand-proj-item" style="color:var(--text-muted);">• Academic Capstone Project: Upload your resume PDF or DOCX above to extract your actual projects, tech stack, and achievements dynamically.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- TAB 2: JOB MATCHING & SKILL GAP            -->
+      <!-- ========================================== -->
+      <section id="tab-matching" class="tab-pane">
+        <div class="grid-2">
+          <!-- Job List Filter & Container -->
+          <div>
+            <div class="card" style="margin-bottom:1rem; padding:1rem;">
+              <div style="display:flex; gap:0.75rem;">
+                <select id="role-filter-select" class="chat-input" onchange="filterJobs()" style="max-width:200px;">
+                  <option value="all">All Roles (120 Jobs)</option>
+                  <option value="Data Scientist">Data Scientist</option>
+                  <option value="Machine Learning">ML Engineer</option>
+                  <option value="Data Analyst">Data Analyst</option>
+                  <option value="AI Research">AI Research Engineer</option>
+                  <option value="MLOps">MLOps Engineer</option>
+                  <option value="Full Stack">Full Stack Developer</option>
+                  <option value="Backend">Backend Engineer</option>
+                </select>
+                <input type="text" id="job-search-input" class="chat-input" placeholder="Search company, title or skill..." oninput="filterJobs()">
+              </div>
+            </div>
+
+            <div id="jobs-list-container" style="max-height: 650px; overflow-y:auto; padding-right:0.5rem;">
+              <!-- Ranked jobs injected dynamically -->
+            </div>
+          </div>
+
+          <!-- Selected Job Detail & Explainable Breakdown -->
+          <div>
+            <div class="card" id="job-detail-card">
+              <div class="card-title">
+                <div>
+                  <span id="detail-job-title" style="color:#818cf8;">Select a Role to View Breakdown</span>
+                  <div style="font-size:0.8rem; color:var(--text-muted);" id="detail-job-company">Upload your resume to compare with real engineering jobs</div>
+                </div>
+                <div class="job-match-pill" id="detail-match-score">--%</div>
+              </div>
+
+              <!-- Explainable 5-Factor Breakdown -->
+              <div style="background:rgba(0,0,0,0.25); padding:1rem; border-radius:var(--radius-md); margin-bottom:1.25rem;">
+                <div style="font-size:0.8rem; font-weight:700; color:var(--text-muted); margin-bottom:0.75rem;">EXPLAINABLE 5-FACTOR COMPOSITE MATCH FORMULA</div>
+                
+                <div class="metric-row">
+                  <div class="metric-header">
+                    <span>Semantic Context Vector Similarity (Weight: 40%)</span>
+                    <span id="factor-semantic">--%</span>
+                  </div>
+                  <div class="metric-bar-bg"><div class="metric-bar-fill" id="bar-semantic" style="width:0%"></div></div>
+                </div>
+
+                <div class="metric-row">
+                  <div class="metric-header">
+                    <span>Direct Skill Requirement Match (Weight: 30%)</span>
+                    <span id="factor-skill">--%</span>
+                  </div>
+                  <div class="metric-bar-bg"><div class="metric-bar-fill" id="bar-skill" style="width:0%"></div></div>
+                </div>
+
+                <div class="metric-row">
+                  <div class="metric-header">
+                    <span>Experience Seniority Fit (Weight: 15%)</span>
+                    <span id="factor-exp">--%</span>
+                  </div>
+                  <div class="metric-bar-bg"><div class="metric-bar-fill" id="bar-exp" style="width:0%"></div></div>
+                </div>
+
+                <div class="metric-row">
+                  <div class="metric-header">
+                    <span>Degree & Education Alignment (Weight: 10%)</span>
+                    <span id="factor-edu">--%</span>
+                  </div>
+                  <div class="metric-bar-bg"><div class="metric-bar-fill" id="bar-edu" style="width:0%"></div></div>
+                </div>
+
+                <div class="metric-row">
+                  <div class="metric-header">
+                    <span>Project Domain Relevance (Weight: 5%)</span>
+                    <span id="factor-proj">--%</span>
+                  </div>
+                  <div class="metric-bar-bg"><div class="metric-bar-fill" id="bar-proj" style="width:0%"></div></div>
+                </div>
+              </div>
+
+              <!-- Skill Gap Matrix -->
+              <div style="margin-bottom:1.25rem;">
+                <div style="font-size:0.85rem; font-weight:700; color:#34d399; margin-bottom:0.4rem;">✓ MATCHED SKILLS (PRESENT IN RESUME)</div>
+                <div class="badge-group" id="detail-matched-skills">
+                  <span style="color:var(--text-muted); font-size:0.8rem;">Upload your resume to calculate matched skills</span>
+                </div>
+              </div>
+
+              <div style="margin-bottom:1.25rem;">
+                <div style="font-size:0.85rem; font-weight:700; color:#f87171; margin-bottom:0.4rem;">✗ MISSING REQUIRED SKILLS (CRITICAL GAPS)</div>
+                <div class="badge-group" id="detail-missing-skills">
+                  <span style="color:var(--text-muted); font-size:0.8rem;">Upload your resume to calculate skill gaps</span>
+                </div>
+              </div>
+
+              <div style="margin-bottom:1.5rem;">
+                <div style="font-size:0.85rem; font-weight:700; color:#fbbf24; margin-bottom:0.4rem;">★ PREFERRED SKILLS (BONUS GAPS)</div>
+                <div class="badge-group" id="detail-pref-missing">
+                  <span style="color:var(--text-muted); font-size:0.8rem;">Upload your resume to view preferred bonus gaps</span>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:0.75rem;">
+                <button class="btn" onclick="openSimulatorForJob()">⚡ Simulate In What-If Tool</button>
+                <button class="btn btn-secondary" onclick="openRoadmapForJob()">🗺️ Generate Learning Roadmap</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- TAB 3: WHAT-IF CAREER SIMULATOR           -->
+      <!-- ========================================== -->
+      <section id="tab-simulator" class="tab-pane">
+        <div class="card">
+          <div class="card-title">
+            <span>Interactive "What-If" Skill Acquisition Simulator</span>
+            <span class="badge badge-neutral">Dynamic Score Re-calculation</span>
+          </div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1.5rem;">
+            Estimate how acquiring high-demand skills elevates your match percentage for <strong id="sim-target-role" style="color:white;">Data Scientist</strong> at <strong id="sim-target-company" style="color:white;">Razorpay</strong>.
+          </p>
+
+          <div class="grid-2">
+            <!-- Missing Skills Toggle -->
+            <div>
+              <div style="font-size:0.85rem; font-weight:700; color:var(--text-muted); margin-bottom:0.75rem;">SELECT SKILLS TO ACQUIRE:</div>
+              <div id="sim-skill-checkboxes" style="display:flex; flex-direction:column; gap:0.6rem;">
+                <!-- Dynamic checkboxes -->
+              </div>
+            </div>
+
+            <!-- Impact Result Display -->
+            <div style="background:rgba(0,0,0,0.25); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.5rem; text-align:center;">
+              <div style="font-size:0.8rem; color:var(--text-muted); font-weight:700;">PROJECTED MATCH IMPACT</div>
+              
+              <div style="display:flex; align-items:center; justify-content:center; gap:1.5rem; margin:1.5rem 0;">
+                <div>
+                  <div style="font-size:0.75rem; color:var(--text-muted);">CURRENT</div>
+                  <div style="font-size:1.8rem; font-weight:800; color:#cbd5e1;" id="sim-orig-score">--%</div>
+                </div>
+                <div style="font-size:1.8rem; color:var(--primary);">➔</div>
+                <div>
+                  <div style="font-size:0.75rem; color:var(--text-muted);">SIMULATED</div>
+                  <div style="font-size:2.2rem; font-weight:800; color:#34d399;" id="sim-new-score">--%</div>
+                </div>
+              </div>
+
+              <div class="badge badge-matched" id="sim-delta-badge" style="font-size:0.9rem; padding:0.4rem 1rem;">
+                +0.0% Score Increase
+              </div>
+
+              <p style="color:var(--text-muted); font-size:0.85rem; margin-top:1.25rem;" id="sim-summary-text">
+                Upload a resume and select one or more missing skills to calculate immediate match elevation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- TAB 4: PERSONALIZED LEARNING ROADMAP       -->
+      <!-- ========================================== -->
+      <section id="tab-roadmap" class="tab-pane">
+        <div class="card">
+          <div class="card-title">
+            <span>Personalized Step-by-Step Learning Roadmap</span>
+            <span class="badge badge-matched" id="roadmap-hours-badge">Target Roadmap</span>
+          </div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1.5rem;">
+            Curated milestone progression sequenced by prerequisites and industry demand for <strong id="roadmap-role-title" style="color:white;">Data Scientist</strong>.
+          </p>
+
+          <div class="timeline" id="roadmap-timeline">
+            <!-- Steps injected dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- TAB 5: MARKET ANALYTICS & CLUSTERS         -->
+      <!-- ========================================== -->
+      <section id="tab-market" class="tab-pane">
+        <div class="grid-2">
+          <!-- Top In-Demand Skills Chart -->
+          <div class="card">
+            <div class="card-title">
+              <span>Industry Skill Demand Frequency (%)</span>
+              <span class="badge badge-neutral">Top 10 Tech Skills</span>
+            </div>
+            <div style="height:280px;">
+              <canvas id="market-skills-chart"></canvas>
+            </div>
+          </div>
+
+          <!-- Salary by Role Chart -->
+          <div class="card">
+            <div class="card-title">
+              <span>Salary Spectrum by Career Role (LPA in ₹)</span>
+              <span class="badge badge-neutral">Entry vs Senior</span>
+            </div>
+            <div style="height:280px;">
+              <canvas id="salary-chart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- K-Means 2D PCA Cluster Map -->
+        <div class="card">
+          <div class="card-title">
+            <span>Unsupervised K-Means Job Market Clusters (2D PCA Space)</span>
+            <span class="badge badge-matched" id="cluster-meta-badge">K=5 Clusters • Silhouette: 0.641</span>
+          </div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">
+            Jobs naturally group into 5 distinct tech families in vector space. Dimensionality reduced from 76 skill features to 2 principal components.
+          </p>
+          <div style="height:340px;">
+            <canvas id="pca-cluster-chart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================== -->
+      <!-- TAB 6: MY SAVED RESUMES (MONGODB ATLAS PERSONAL DASHBOARD)    -->
+      <!-- ============================================================== -->
+      <section id="tab-history" class="tab-pane">
+        <div class="card">
+          <div class="card-title">
+            <div>
+              <span style="font-size:1.15rem; font-weight:700;">My Uploaded Resumes Repository (MongoDB Atlas)</span>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.2rem;" id="user-repo-subtext">
+                Personal Vault: 0 Resumes Saved
+              </div>
+            </div>
+            <div style="display:flex; gap:0.5rem;">
+              <button class="btn" style="padding:0.4rem 0.8rem; font-size:0.8rem;" onclick="document.getElementById('file-upload-input').click()">
+                📥 Upload New Resume
+              </button>
+              <button class="sample-btn" onclick="fetchUserResumes()">🔄 Refresh</button>
+            </div>
+          </div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1.25rem;">
+            Every resume uploaded by your account is securely stored in MongoDB Atlas. Click any resume below to instantly load it into the NLP Engine, re-calculate match percentages, and analyze skill gaps.
+          </p>
+
+          <div id="user-resumes-container" class="user-resumes-grid">
+            <!-- Dynamic user resumes injected here -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- ================================================================= -->
+  <!-- 3. FLOATING CAREER COPILOT AI CHAT DRAWER                        -->
+  <!-- ================================================================= -->
+  <button class="chat-fab" onclick="toggleChat()" title="Ask Career AI Copilot">💬</button>
+
+  <div class="chat-drawer" id="chat-drawer">
+    <div class="chat-header">
+      <div style="display:flex; align-items:center; gap:0.5rem;">
+        <span style="font-size:1.1rem;">🤖</span>
+        <strong style="font-size:0.9rem;">Hack My Career Copilot</strong>
+      </div>
+      <button onclick="toggleChat()" style="background:none; border:none; color:white; cursor:pointer; font-size:1.1rem;">✕</button>
+    </div>
+    
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg bot">
+        Hello! I'm your <strong>Hack My Career Copilot</strong>. Ask me questions like:
+        <br><br>
+        • <em>Why is my match score 87.5%?</em><br>
+        • <em>What should I learn first?</em><br>
+        • <em>How can I improve my ATS score?</em>
+      </div>
+    </div>
+
+    <div class="chat-input-bar">
+      <input type="text" id="chat-input" class="chat-input" placeholder="Ask a question..." onkeydown="if(event.key==='Enter') sendChatMessage()">
+      <button class="btn" style="padding:0.4rem 0.8rem;" onclick="sendChatMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

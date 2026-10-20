@@ -1,0 +1,203 @@
+{
+  "Docker": {
+    "prerequisites": [
+      "Linux",
+      "Git"
+    ],
+    "difficulty": "Intermediate",
+    "estimated_hours": 18,
+    "summary": "Containerize machine learning microservices and web backends for reproducible deployments.",
+    "milestones": [
+      "Understand Images vs Containers, namespaces and cgroups",
+      "Write multi-stage Dockerfiles for Python & FastAPI applications",
+      "Compose multi-service setups with Docker Compose (App + Database + Redis)"
+    ],
+    "free_tutorials": [
+      {
+        "title": "Docker for Beginners (Docker Official)",
+        "url": "https://docs.docker.com/get-started/"
+      },
+      {
+        "title": "Docker in 100 Seconds & Full Course (Fireship / freeCodeCamp)",
+        "url": "https://www.youtube.com/watch?v=fqMOX6JJhGo"
+      }
+    ],
+    "project_idea": "Build and containerize a FastAPI ML inference service with a health-check endpoint and deploy locally via docker-compose."
+  },
+  "AWS": {
+    "prerequisites": [
+      "Linux",
+      "Docker"
+    ],
+    "difficulty": "Intermediate",
+    "estimated_hours": 24,
+    "summary": "Deploy cloud-native scalable ML workloads, object storage (S3), and serverless functions (Lambda).",
+    "milestones": [
+      "Setup AWS IAM roles, CLI and security policies",
+      "Deploy ML pipelines on Amazon EC2 and S3 object buckets",
+      "Explore AWS SageMaker endpoints and AWS Lambda serverless triggers"
+    ],
+    "free_tutorials": [
+      {
+        "title": "AWS Cloud Practitioner Essentials (AWS Skill Builder)",
+        "url": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/"
+      },
+      {
+        "title": "Deploying Machine Learning on AWS (Coursera / YouTube)",
+        "url": "https://aws.amazon.com/getting-started/hands-on/"
+      }
+    ],
+    "project_idea": "Deploy a sentiment analysis model on AWS EC2 behind an NGINX reverse proxy with automated S3 dataset backups."
+  },
+  "Kubernetes": {
+    "prerequisites": [
+      "Docker",
+      "Linux"
+    ],
+    "difficulty": "Advanced",
+    "estimated_hours": 30,
+    "summary": "Orchestrate containerized services with auto-scaling, load balancing, and self-healing deployments.",
+    "milestones": [
+      "Master Pods, Deployments, ReplicaSets, and Services",
+      "Configure Ingress controllers and ConfigMaps/Secrets",
+      "Deploy ML serving models with horizontal pod autoscalers (HPA)"
+    ],
+    "free_tutorials": [
+      {
+        "title": "Kubernetes Official Tutorials (Interactive Minikube)",
+        "url": "https://kubernetes.io/docs/tutorials/"
+      },
+      {
+        "title": "Kubernetes Course for Beginners (freeCodeCamp)",
+        "url": "https://www.youtube.com/watch?v=X48VuDVv0do"
+      }
+    ],
+    "project_idea": "Spin up a local Minikube cluster and deploy a scaled 3-replica REST API model server with ingress routing."
+  },
+  "PyTorch": {
+    "prerequisites": [
+      "Python",
+      "NumPy",
+      "Linear Algebra"
+    ],
+    "difficulty": "Intermediate",
+    "estimated_hours": 35,
+    "summary": "Build, train, and fine-tune deep neural networks and transformer architectures using dynamic computation graphs.",
+    "milestones": [
+      "Tensors, Autograd, and GPU acceleration with CUDA",
+      "Custom nn.Module architectures, Loss functions, and Optimizers",
+      "Training loops, DataLoader, validation, and saving checkpoints"
+    ],
+    "free_tutorials": [
+      {
+        "title": "Deep Learning with PyTorch: A 60 Minute Blitz",
+        "url": "https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html"
+      },
+      {
+        "title": "PyTorch for Deep Learning Bootcamp (freeCodeCamp)",
+        "url": "https://www.youtube.com/watch?v=V_xro1bcAuA"
+      }
+    ],
+    "project_idea": "Implement a ResNet image classifier or an LSTM time-series predictor in PyTorch with TensorBoard monitoring."
+  },
+  "Transformers": {
+    "prerequisites": [
+      "PyTorch",
+      "Natural Language Processing"
+    ],
+    "difficulty": "Advanced",
+    "estimated_hours": 30,
+    "summary": "Fine-tune modern Transformer models (BERT, RoBERTa, T5) and build semantic retrieval search engines.",
+    "milestones": [
+      "Self-attention mathematics, Positional encodings, and Multi-head attention",
+      "Hugging Face transformers pipeline, tokenizers, and datasets",
+      "Semantic embeddings and dense passage retrieval with Sentence Transformers"
+    ],
+    "free_tutorials": [
+      {
+        "title": "Hugging Face NLP Course (Official)",
+        "url": "https://huggingface.co/learn/nlp-course/chapter1/1"
+      },
+      {
+        "title": "Sentence Transformers Documentation & Guides",
+        "url": "https://www.sbert.net/"
+      }
+    ],
+    "project_idea": "Build a semantic resume-job search engine matching candidate profiles with dense embeddings."
+  },
+  "Power BI": {
+    "prerequisites": [
+      "Excel",
+      "SQL"
+    ],
+    "difficulty": "Beginner",
+    "estimated_hours": 15,
+    "summary": "Create executive visual analytics dashboards, calculate DAX measures, and model business data.",
+    "milestones": [
+      "Data ingestion and transformation via Power Query",
+      "Star schema dimensional data modeling and relationships",
+      "DAX measures (CALCULATE, SUMX, RELATED) and interactive cross-filtering"
+    ],
+    "free_tutorials": [
+      {
+        "title": "Microsoft Power BI Guided Learning",
+        "url": "https://learn.microsoft.com/en-us/power-bi/guided-learning/"
+      },
+      {
+        "title": "Power BI Full Course (freeCodeCamp)",
+        "url": "https://www.youtube.com/watch?v=TmhQCQr_8DQ"
+      }
+    ],
+    "project_idea": "Design an interactive HR Recruitment Dashboard analyzing hiring funnel metrics and time-to-hire across departments."
+  },
+  "MLOps": {
+    "prerequisites": [
+      "Python",
+      "Docker",
+      "Machine Learning"
+    ],
+    "difficulty": "Advanced",
+    "estimated_hours": 28,
+    "summary": "Manage end-to-end machine learning lifecycles: experiment tracking, data versioning, and continuous model monitoring.",
+    "milestones": [
+      "Experiment logging and model registry with MLflow",
+      "Data & model artifact version control with DVC",
+      "Automated training and evaluation CI/CD pipelines"
+    ],
+    "free_tutorials": [
+      {
+        "title": "Made With ML (Goku Mohandas MLOps Course)",
+        "url": "https://madewithml.com/"
+      },
+      {
+        "title": "Full Stack Deep Learning MLOps",
+        "url": "https://fullstackdeeplearning.com/"
+      }
+    ],
+    "project_idea": "Build an automated MLflow pipeline that triggers retraining on new data batches and logs model validation metrics."
+  },
+  "PostgreSQL": {
+    "prerequisites": [
+      "SQL"
+    ],
+    "difficulty": "Intermediate",
+    "estimated_hours": 16,
+    "summary": "Master relational database schema design, indexing, window functions, and query optimization.",
+    "milestones": [
+      "Advanced SQL: CTEs, Window functions (ROW_NUMBER, RANK, LAG/LEAD)",
+      "Database normalization, Foreign keys, and Index types (B-Tree, GIN, GiST)",
+      "Query execution plans with EXPLAIN ANALYZE and transaction isolation levels"
+    ],
+    "free_tutorials": [
+      {
+        "title": "PostgreSQL Tutorial for Beginners",
+        "url": "https://www.postgresqltutorial.com/"
+      },
+      {
+        "title": "Advanced SQL & Database Design (freeCodeCamp)",
+        "url": "https://www.youtube.com/watch?v=HXV3zeRR3h4"
+      }
+    ],
+    "project_idea": "Design a relational schema for an e-commerce platform with partitioned order tables and optimized indexing."
+  }
+}

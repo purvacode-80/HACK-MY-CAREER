@@ -1,0 +1,83 @@
+[
+  {
+    "id": "sample-ds-student",
+    "name": "Aarav Sharma",
+    "title": "3rd Year B.Tech Computer Science & Data Science Student",
+    "education": "B.Tech in Computer Science and Engineering, 2022 - 2026 (CGPA: 8.8/10)",
+    "experience_years": 0.5,
+    "summary": "Enthusiastic undergraduate student with a strong foundation in Data Science, Machine Learning, and Statistical Analysis. Hands-on experience developing predictive models using Scikit-Learn, conducting exploratory data analysis with Pandas and Matplotlib, and querying relational databases using SQL.",
+    "skills": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-Learn",
+      "Machine Learning",
+      "Exploratory Data Analysis",
+      "Data Cleaning",
+      "Statistics",
+      "SQL",
+      "Matplotlib",
+      "Seaborn",
+      "Git"
+    ],
+    "projects": [
+      "Customer Churn Prediction: Implemented classification pipelines using Random Forest and Logistic Regression achieving 87% accuracy with hyperparameter tuning via GridSearchCV.",
+      "Exploratory Data Analysis on COVID-19 Trends: Analyzed global infection datasets using Pandas and Seaborn, discovering key seasonal transmission patterns.",
+      "Student Performance Analytics Dashboard: Built interactive SQL queries and data visualization reports analyzing academic trends across 5 departments."
+    ],
+    "extracted_text": "AARAV SHARMA\nThird Year B.Tech Computer Science & Engineering\nEmail: aarav.sharma@example.edu | GitHub: github.com/aarav-ds | LinkedIn: linkedin.com/in/aarav-sharma\n\nEDUCATION\nBachelor of Technology in Computer Science & Engineering\nXYZ Institute of Technology, 2022 - 2026 | CGPA: 8.8 / 10.0\n\nTECHNICAL SKILLS\nLanguages: Python, SQL, C++, Bash\nData Science & Analytics: Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Statistics, Exploratory Data Analysis, Data Cleaning\nMachine Learning: Supervised Learning, Random Forest, Logistic Regression, Feature Engineering, Model Evaluation\nTools: Git, GitHub, Jupyter Notebook, VS Code\n\nACADEMIC & CAPSTONE PROJECTS\n1. Customer Churn Prediction System\n- Developed end-to-end machine learning pipeline using Python and Scikit-Learn.\n- Conducted thorough exploratory data analysis, handled class imbalance with SMOTE, and engineered features.\n- Evaluated Random Forest, Decision Trees, and Logistic Regression with 87% ROC-AUC.\n\n2. Global COVID-19 Statistical Analysis & Visualization\n- Cleaned and normalized messy epidemiological datasets using Pandas and NumPy.\n- Visualized multi-variate correlations and hypothesis testing using Matplotlib and Seaborn.\n\n3. Student Performance Analytics Platform\n- Authored complex SQL aggregation queries and window functions across 50,000+ student records.\n- Identified drop-out risk factors through statistical inference.\n"
+  },
+  {
+    "id": "sample-web-fullstack",
+    "name": "Riya Patel",
+    "title": "Full Stack Web & Cloud Enthusiast",
+    "education": "B.Tech in Information Technology, 2022 - 2026 (CGPA: 8.5/10)",
+    "experience_years": 1.0,
+    "summary": "Web developer passionate about building scalable full-stack applications with React, Node.js, and MongoDB. Experienced in containerizing applications with Docker and designing RESTful APIs.",
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST APIs",
+      "HTML/CSS",
+      "Docker",
+      "Git",
+      "PostgreSQL",
+      "Linux"
+    ],
+    "projects": [
+      "Campus Placement Portal: Full stack MERN application with role-based JWT authentication, resume upload, and real-time job notifications.",
+      "Microservices Task Manager: Built scalable backend services with Node.js, Express, Docker Compose, and Redis caching."
+    ],
+    "extracted_text": "RIYA PATEL\nB.Tech Information Technology | Bangalore, India\nEmail: riya.patel@example.com | Portfolio: riyapatel.dev\n\nTECHNICAL SKILLS\nFrontend: React, JavaScript, TypeScript, HTML/CSS, Tailwind CSS\nBackend: Node.js, Express, REST APIs, GraphQL\nDatabases: MongoDB, PostgreSQL, Redis\nDevOps & Cloud: Docker, Git, Linux, GitHub Actions\n\nPROJECTS\n1. Campus Placement Management System (MERN Stack)\n- Designed full stack web portal using React, Node.js, Express, and MongoDB.\n- Implemented secure JWT authentication and role-based access for students and recruiters.\n\n2. Containerized Task Queue Microservice\n- Deployed multi-container environment with Docker Compose.\n- Implemented Redis caching to reduce database read latency by 60%.\n"
+  },
+  {
+    "id": "sample-ai-engineer",
+    "name": "Karan Verma",
+    "title": "Aspiring AI & Deep Learning Engineer",
+    "education": "B.Tech in Artificial Intelligence & Data Science, 2022 - 2026 (CGPA: 9.1/10)",
+    "experience_years": 1.0,
+    "summary": "AI enthusiast focused on Deep Learning, Transformers, and Natural Language Processing. Experienced with PyTorch, FastAPI microservices, Docker, and Hugging Face pipelines.",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Natural Language Processing",
+      "Deep Learning",
+      "Neural Networks",
+      "FastAPI",
+      "Docker",
+      "Git",
+      "Scikit-Learn",
+      "Linux"
+    ],
+    "projects": [
+      "Bi-Encoder Semantic Search Engine: Fine-tuned Sentence-Transformers model for domain-specific document search with 89% top-3 precision.",
+      "FastAPI Neural Inference Service: Containerized PyTorch model endpoint with asynchronous batching and Docker deployment."
+    ],
+    "extracted_text": "KARAN VERMA\nB.Tech AI & Data Science\nEmail: karan.verma@example.edu | GitHub: github.com/karan-ai\n\nSKILLS\nDeep Learning & AI: PyTorch, Transformers, Natural Language Processing, Neural Networks, Hugging Face\nLanguages & Backend: Python, FastAPI, REST APIs, SQL\nInfrastructure: Docker, Linux, Git, MLflow\n\nPROJECTS\n1. Bi-Encoder Semantic Search System\n- Implemented sentence embeddings using PyTorch and Hugging Face Transformers.\n- Designed vector similarity retrieval scoring against 10,000+ technical documents.\n\n2. Asynchronous Model Inference Gateway\n- Built high-throughput API using FastAPI and Uvicorn.\n- Packaged model artifacts within Docker containers for lightweight cloud deployment.\n"
+  }
+]
