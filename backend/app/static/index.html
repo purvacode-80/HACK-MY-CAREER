@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hack My Career | AI Resume & Career Intelligence</title>
-  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/styles.css?v=2.1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -200,6 +200,9 @@
       </button>
       <button class="tab-btn" onclick="switchTab('tab-matching')">
         🎯 Job Matching & Skill Gap
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-live-jobs')">
+        🌐 Real-World Live Jobs
       </button>
       <button class="tab-btn" onclick="switchTab('tab-simulator')">
         ⚡ What-If Simulator
@@ -519,6 +522,109 @@
         </div>
       </section>
 
+      <!-- ============================================================== -->
+      <!-- TAB 2.5: REAL-WORLD LIVE JOBS (NAUKRI, LINKEDIN, INDEED)        -->
+      <!-- ============================================================== -->
+      <section id="tab-live-jobs" class="tab-pane">
+        
+        <!-- Live Jobs Header Card -->
+        <div class="card" style="margin-bottom:1.5rem;">
+          <div class="card-title">
+            <div>
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span style="font-size:1.35rem; font-weight:800; background:linear-gradient(to right, #ffffff, #a5b4fc); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+                  🌐 Real-World Live Job Intelligence & Skill Alignment
+                </span>
+                <span class="badge badge-matched">Live Feed Active</span>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.86rem; margin-top:0.35rem;">
+                Aggregated from live Indian job postings across <strong>Naukri.com</strong>, <strong>LinkedIn</strong>, <strong>Indeed.com</strong>, and <strong>Adzuna API</strong>. Every live job is automatically parsed with our NLP Taxonomy Engine and scored against your uploaded resume using the 5-Factor explainable matching model.
+              </p>
+            </div>
+            <div style="text-align:right;">
+              <span class="badge badge-filename-pill" id="live-source-pill">🟢 Naukri • LinkedIn • Indeed • Adzuna</span>
+            </div>
+          </div>
+
+          <!-- Search & Filter Controls -->
+          <div class="live-jobs-filter-panel" style="margin-top:1rem; background:rgba(15, 23, 42, 0.6); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border);">
+            <div class="live-jobs-inputs-grid" style="display:grid; grid-template-columns: 2fr 1.5fr 1.2fr auto; gap:0.75rem; align-items:center;">
+              <div>
+                <label style="display:block; font-size:0.75rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-bottom:0.3rem;">Role / Technology</label>
+                <input type="text" id="live-job-query" class="chat-input" placeholder="e.g. Data Scientist, Machine Learning, Python..." value="Data Scientist">
+              </div>
+              <div>
+                <label style="display:block; font-size:0.75rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-bottom:0.3rem;">City / Location</label>
+                <input type="text" id="live-job-location" class="chat-input" placeholder="e.g. Pune, Bengaluru, Remote..." value="Pune">
+              </div>
+              <div>
+                <label style="display:block; font-size:0.75rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-bottom:0.3rem;">Source Portal</label>
+                <select id="live-job-portal" class="chat-input" style="cursor:pointer;">
+                  <option value="all">All Portals (Combined)</option>
+                  <option value="Naukri">🟢 Naukri.com</option>
+                  <option value="LinkedIn">🔵 LinkedIn</option>
+                  <option value="Indeed">🟣 Indeed.com</option>
+                  <option value="Adzuna">🌐 Adzuna Partner</option>
+                </select>
+              </div>
+              <div style="padding-top:1.2rem;">
+                <button class="btn btn-primary" onclick="fetchLiveJobs()" id="btn-live-search" style="padding:0.7rem 1.4rem; white-space:nowrap; width:100%;">
+                  <span>🔍 Search Real Jobs</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Quick Filter Chips -->
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-top:1rem; flex-wrap:wrap;">
+              <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600; text-transform:uppercase;">Quick Presets:</span>
+              <button class="sample-btn" onclick="applyLiveJobPreset('Data Scientist', 'Pune')">📊 Data Scientist (Pune)</button>
+              <button class="sample-btn" onclick="applyLiveJobPreset('Machine Learning', 'Bengaluru')">🤖 ML Engineer (Bengaluru)</button>
+              <button class="sample-btn" onclick="applyLiveJobPreset('Data Analyst', 'Pune')">📈 Data Analyst (Pune)</button>
+              <button class="sample-btn" onclick="applyLiveJobPreset('Full Stack Developer', 'Mumbai')">💻 Full Stack (Mumbai)</button>
+              <button class="sample-btn" onclick="applyLiveJobPreset('Python', 'Remote')">🐍 Python Remote</button>
+            </div>
+          </div>
+
+          <!-- Real-Time Context Banner -->
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1rem; padding:0.75rem 1rem; background:rgba(99, 102, 241, 0.08); border-radius:var(--radius-sm); border:1px solid rgba(99, 102, 241, 0.2);">
+            <div style="display:flex; align-items:center; gap:0.6rem; font-size:0.83rem;">
+              <span style="color:#818cf8; font-weight:700;">👤 Active Resume Matching:</span>
+              <span id="live-matching-candidate-label" style="color:var(--text-main);">Upload resume to see personalized scores</span>
+            </div>
+            <div id="live-jobs-stat-badge" style="font-size:0.8rem; color:#34d399; font-weight:600;">
+              Showing 0 Real-World Jobs
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Jobs Cards Grid Container -->
+        <div id="live-jobs-container" class="live-jobs-grid" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap:1.25rem;">
+          <!-- Dynamically populated by app.js -->
+        </div>
+
+        <!-- Real-World Architecture & Guide Explanation Box -->
+        <div class="card" style="margin-top:2rem; background:rgba(19, 29, 49, 0.6); border:1px solid rgba(255,255,255,0.08);">
+          <div class="card-title">
+            <div style="display:flex; align-items:center; gap:0.6rem;">
+              <span style="font-size:1.15rem;">📘</span>
+              <span style="font-size:1rem; font-weight:700;">Academic Defense & Real-World Alignment Blueprint</span>
+            </div>
+            <span class="badge badge-neutral">Production Best Practices</span>
+          </div>
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.25rem; font-size:0.85rem; color:var(--text-muted); line-height:1.6; margin-top:0.5rem;">
+            <div>
+              <strong style="color:white; display:block; margin-bottom:0.3rem;">1. Why API Aggregators vs Direct Scraping?</strong>
+              Direct scraping of portals like Naukri.com, LinkedIn, and Indeed violates their Terms of Service and triggers Cloudflare IP blocks/CAPTCHAs. Production systems rely on official aggregator APIs like <strong>Adzuna API</strong> (free 1000 calls/mo for India) and <strong>JSearch (RapidAPI)</strong> to fetch structured, legal real-time data.
+            </div>
+            <div>
+              <strong style="color:white; display:block; margin-bottom:0.3rem;">2. 5-Factor Semantic Alignment</strong>
+              Every fetched job description undergoes automated skill extraction through our curated 76+ canonical taxonomy. The candidate's resume is dynamically benchmarked against the real employer requirements using Cosine Similarity, Jaccard Skill Overlap, and Seniority alignment.
+            </div>
+          </div>
+        </div>
+
+      </section>
+
       <!-- ========================================== -->
       <!-- TAB 3: WHAT-IF CAREER SIMULATOR           -->
       <!-- ========================================== -->
@@ -695,6 +801,6 @@
     </div>
   </div>
 
-  <script src="/static/app.js"></script>
+  <script src="/static/app.js?v=2.1"></script>
 </body>
 </html>

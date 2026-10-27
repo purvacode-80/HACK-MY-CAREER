@@ -15,6 +15,7 @@ from backend.app.ml.clusterer import job_clusterer
 from backend.app.ml.simulator import what_if_simulator
 from backend.app.ml.roadmap import roadmap_engine
 from backend.app.ml.copilot import career_copilot
+from backend.app.ml.job_fetcher import job_fetcher
 from backend.app.db.mongodb import db_manager
 
 app = FastAPI(
@@ -98,6 +99,13 @@ class SaveResumeRequest(BaseModel):
     filename: str
     candidate: CandidateProfileModel
     target_role: Optional[str] = "Data Scientist"
+
+class LiveJobSearchRequest(BaseModel):
+    query: str = "Data Scientist"
+    location: str = ""
+    portal_filter: str = "all"
+    candidate: Optional[CandidateProfileModel] = None
+    max_results: int = 25
 
 @app.get("/api/health")
 def health_check():
@@ -296,6 +304,52 @@ def match_custom_job(req: CustomJobMatchRequest):
     return {
         "match": match_result,
         "job": custom_job
+    }
+
+@app.post("/api/jobs/live-search")
+async def search_live_jobs(req: LiveJobSearchRequest):
+    """
+    Fetches real-world job listings from portals (Naukri, LinkedIn, Indeed, Adzuna),
+    extracts canonical skills using taxonomy engine, and matches candidate profile
+    using the 5-factor explainable scoring engine.
+    """
+    raw_jobs = await job_fetcher.search_jobs(
+        query=req.query,
+        location=req.location,
+        portal_filter=req.portal_filter,
+        max_results=req.max_results
+    )
+
+    matched_count = 0
+    if req.candidate:
+        candidate_dict = req.candidate.model_dump()
+        for job in raw_jobs:
+            try:
+                match_result = matcher_engine.calculate_explainable_match(candidate_dict, job)
+                job["match_score"] = match_result.get("overall_match_score", 0)
+                job["matched_skills"] = match_result.get("matched_skills", [])
+                job["missing_skills"] = match_result.get("missing_skills", [])
+                job["score_breakdown"] = match_result.get("score_breakdown", {})
+                job["strengths"] = match_result.get("strengths", [])
+                job["gap_analysis"] = match_result.get("gap_analysis", [])
+                matched_count += 1
+            except Exception as e:
+                print(f"[LiveMatch] Error matching job {job.get('id')}: {e}")
+                job["match_score"] = None
+                job["matched_skills"] = []
+                job["missing_skills"] = job.get("required_skills", [])
+        
+        # Sort descending by match score
+        raw_jobs.sort(key=lambda x: (x.get("match_score") is not None, x.get("match_score") or 0), reverse=True)
+
+    return {
+        "status": "success",
+        "jobs": raw_jobs,
+        "count": len(raw_jobs),
+        "matched_with_candidate": bool(req.candidate),
+        "query": req.query,
+        "location": req.location,
+        "portal_filter": req.portal_filter
     }
 
 @app.post("/api/career/recommendations")

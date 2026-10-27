@@ -12,6 +12,7 @@ let marketData = null;
 let selectedSimSkills = new Set();
 let customJobMatch = null;
 let customJobObj = null;
+let liveJobsData = [];
 
 // User Session State (MongoDB Atlas Authentication)
 let currentUser = null;
@@ -336,6 +337,11 @@ function switchTab(tabId) {
   if (tabId === "tab-history") {
     fetchUserResumes();
   }
+  if (tabId === "tab-live-jobs") {
+    if (!liveJobsData || liveJobsData.length === 0) {
+      fetchLiveJobs();
+    }
+  }
 }
 
 // =========================================================================
@@ -373,6 +379,12 @@ function setCandidateProfile(profile) {
     const fn = profile.filename || profile.title || "Uploaded_Resume.pdf";
     badge.innerText = fn;
     badge.title = fn;
+  }
+
+  // 2b. Update Live Jobs Active Candidate Status
+  const liveCandEl = document.getElementById("live-matching-candidate-label");
+  if (liveCandEl) {
+    liveCandEl.innerHTML = `<strong>${profile.name || "Candidate"}</strong> (${(profile.skills || []).length} Skills Detected) • Dynamic 5-Factor Score Active`;
   }
 
   // 3. Candidate Name
@@ -1160,4 +1172,329 @@ async function sendChatMessage() {
     botDiv.innerText = "Network error connecting to Copilot API.";
   }
   msgs.scrollTop = msgs.scrollHeight;
+}
+
+// =========================================================================
+// 12. REAL-WORLD LIVE JOBS (NAUKRI.COM, LINKEDIN, INDEED, ADZUNA)
+// =========================================================================
+function applyLiveJobPreset(role, location) {
+  const qEl = document.getElementById("live-job-query");
+  const locEl = document.getElementById("live-job-location");
+  if (qEl) qEl.value = role;
+  if (locEl) locEl.value = location;
+  fetchLiveJobs();
+}
+
+async function fetchLiveJobs() {
+  const qEl = document.getElementById("live-job-query");
+  const locEl = document.getElementById("live-job-location");
+  const portalEl = document.getElementById("live-job-portal");
+  const btn = document.getElementById("btn-live-search");
+  const container = document.getElementById("live-jobs-container");
+  const statBadge = document.getElementById("live-jobs-stat-badge");
+
+  const query = (qEl ? qEl.value : "Data Scientist").trim();
+  const location = (locEl ? locEl.value : "").trim();
+  const portal = portalEl ? portalEl.value : "all";
+
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = `<span>⏳ Searching Portals...</span>`;
+  }
+  if (container) {
+    container.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+        <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🌐</div>
+        <p style="font-size: 1.05rem; color: white; font-weight: 700;">Querying Live Market & Parsing Requirements...</p>
+        <p style="font-size: 0.85rem; margin-top: 0.35rem; color: var(--text-muted);">
+          Extracting skills via NLP Taxonomy Engine & scoring against active resume using 5-Factor composite formula
+        </p>
+      </div>
+    `;
+  }
+
+  try {
+    const res = await fetch("/api/jobs/live-search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query: query,
+        location: location,
+        portal_filter: portal,
+        candidate: currentProfile,
+        max_results: 25
+      })
+    });
+
+    if (!res.ok) {
+      throw new Error(`Server returned HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    liveJobsData = data.jobs || [];
+    renderLiveJobs(liveJobsData);
+
+    if (statBadge) {
+      statBadge.innerText = `Showing ${liveJobsData.length} Real-World Jobs`;
+    }
+  } catch (err) {
+    console.error("Live jobs search failed:", err);
+    if (container) {
+      container.innerHTML = `
+        <div style="grid-column: 1/-1; text-align: center; padding: 2.5rem; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-md);">
+          <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">⚠️</div>
+          <p style="color: #fca5a5; font-weight: 700;">Could not connect to Live Job Aggregator</p>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.3rem;">${err.message}</p>
+          <button class="btn btn-primary" style="margin-top: 1rem;" onclick="fetchLiveJobs()">Try Again</button>
+        </div>
+      `;
+    }
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = `<span>🔍 Search Real Jobs</span>`;
+    }
+  }
+}
+
+function renderLiveJobs(jobs) {
+  const container = document.getElementById("live-jobs-container");
+  if (!container) return;
+
+  if (!jobs || jobs.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 3rem 1rem; color: var(--text-muted); background: rgba(19, 29, 49, 0.4); border-radius: var(--radius-lg); border: 1px dashed var(--border);">
+        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔍</div>
+        <p style="color: white; font-weight: 600;">No live jobs found matching your search criteria.</p>
+        <p style="font-size: 0.85rem; margin-top: 0.25rem;">Try broadening your role title or selecting 'All Portals'.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = jobs.map(job => {
+    // Portal styling
+    let portalClass = "portal-naukri";
+    const src = (job.source || "").toLowerCase();
+    if (src.includes("linkedin")) portalClass = "portal-linkedin";
+    else if (src.includes("indeed")) portalClass = "portal-indeed";
+    else if (src.includes("adzuna")) portalClass = "portal-adzuna";
+
+    // Match score formatting
+    let scoreHtml = "";
+    if (job.match_score !== null && job.match_score !== undefined) {
+      const s = Number(job.match_score);
+      let scoreClass = "score-high";
+      if (s < 60) scoreClass = "score-moderate";
+      else if (s < 75) scoreClass = "score-medium";
+
+      scoreHtml = `
+        <div class="live-job-score-badge ${scoreClass}">
+          <span>🎯</span>
+          <span>${s.toFixed(1)}% Match</span>
+        </div>
+        <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">
+          5-Factor Composite
+        </span>
+      `;
+    } else {
+      scoreHtml = `
+        <div class="live-job-score-badge score-moderate">
+          <span>📄</span>
+          <span style="font-size: 0.82rem;">Awaiting Resume Upload</span>
+        </div>
+        <button class="sample-btn" style="padding: 0.2rem 0.5rem; font-size: 0.72rem;" onclick="switchTab('tab-resume')">
+          Upload Now
+        </button>
+      `;
+    }
+
+    // Matched skills tags
+    const matched = job.matched_skills || [];
+    const missing = job.missing_skills || [];
+    const reqSkills = job.required_skills || [];
+
+    let skillsHtml = "";
+    if (matched.length > 0) {
+      skillsHtml += `
+        <div class="live-skills-title live-skills-matched-title">✓ Matched Resume Skills (${matched.length})</div>
+        <div class="live-skills-wrap">
+          ${matched.map(sk => `<span class="live-skill-tag tag-matched">✓ ${sk}</span>`).join("")}
+        </div>
+      `;
+    }
+    if (missing.length > 0) {
+      skillsHtml += `
+        <div class="live-skills-title live-skills-missing-title">✗ Skill Gaps to Learn (${missing.length})</div>
+        <div class="live-skills-wrap">
+          ${missing.slice(0, 6).map(sk => `<span class="live-skill-tag tag-missing">✗ ${sk}</span>`).join("")}
+        </div>
+      `;
+    } else if (matched.length === 0 && reqSkills.length > 0) {
+      skillsHtml += `
+        <div class="live-skills-title" style="color:#a5b4fc;">★ Employer Required Skills (${reqSkills.length})</div>
+        <div class="live-skills-wrap">
+          ${reqSkills.slice(0, 6).map(sk => `<span class="live-skill-tag tag-req">${sk}</span>`).join("")}
+        </div>
+      `;
+    }
+
+    return `
+      <div class="live-job-card">
+        <div>
+          <!-- Header: Portal badge & Salary -->
+          <div class="live-job-header">
+            <span class="live-job-portal-badge ${portalClass}">
+              ${job.source_badge || job.source || "Job Portal"}
+            </span>
+            <span class="live-job-salary">${job.salary_range || "Market Standard"}</span>
+          </div>
+
+          <!-- Title & Company -->
+          <h3 class="live-job-title">${escapeHtml(job.title)}</h3>
+          <div class="live-job-company">
+            <span>🏢</span>
+            <span>${escapeHtml(job.company)}</span>
+          </div>
+
+          <!-- Metadata row -->
+          <div class="live-job-meta-row">
+            <div class="live-job-meta-item">
+              <span>📍</span>
+              <span>${escapeHtml(job.location || "India")}</span>
+            </div>
+            <div class="live-job-meta-item">
+              <span>🕒</span>
+              <span>${escapeHtml(job.posted_at || "Recent")}</span>
+            </div>
+            <div class="live-job-meta-item">
+              <span>🎓</span>
+              <span>${job.min_experience_years || 1}+ yrs exp</span>
+            </div>
+          </div>
+
+          <!-- Match Score Ribbon -->
+          <div class="live-job-score-container">
+            ${scoreHtml}
+          </div>
+
+          <!-- Description snippet -->
+          <p class="live-job-desc">${escapeHtml(job.description || "")}</p>
+
+          <!-- Skills breakdown -->
+          <div class="live-job-skills-section">
+            ${skillsHtml}
+          </div>
+        </div>
+
+        <!-- Footer Actions -->
+        <div class="live-job-footer">
+          <a href="${job.apply_url || '#'}" target="_blank" rel="noopener noreferrer" class="btn-apply-portal" title="Direct live application link on ${job.source}">
+            <span>Apply on ${job.source} ➔</span>
+          </a>
+          ${job.careers_url ? `
+            <a href="${job.careers_url}" target="_blank" rel="noopener noreferrer" class="btn-job-action-sm" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;" title="Visit official careers portal for ${escapeHtml(job.company)}">
+              <span>🏢 Careers</span>
+            </a>
+          ` : ''}
+          <button class="btn-job-action-sm" onclick="simulateLiveJob('${job.id}')" title="Test skill impact in simulator">
+            ⚡ What-If
+          </button>
+          <button class="btn-job-action-sm" onclick="roadmapLiveJob('${job.id}')" title="Generate learning curriculum">
+            🗺️ Roadmap
+          </button>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function simulateLiveJob(jobId) {
+  const job = liveJobsData.find(j => j.id === jobId);
+  if (!job) return;
+
+  switchTab("tab-simulator");
+
+  const targetRoleEl = document.getElementById("sim-target-role");
+  const targetCompanyEl = document.getElementById("sim-target-company");
+  const origScoreEl = document.getElementById("sim-orig-score");
+  const newScoreEl = document.getElementById("sim-new-score");
+  const deltaBadge = document.getElementById("sim-delta-badge");
+  const container = document.getElementById("sim-skill-checkboxes");
+
+  if (targetRoleEl) targetRoleEl.innerText = job.title;
+  if (targetCompanyEl) targetCompanyEl.innerText = `${job.company} (${job.source})`;
+  
+  const currentScore = job.match_score !== null && job.match_score !== undefined ? job.match_score : 50;
+  if (origScoreEl) origScoreEl.innerText = `${currentScore}%`;
+  if (newScoreEl) newScoreEl.innerText = `${currentScore}%`;
+  if (deltaBadge) deltaBadge.innerText = "+0.0% Increase";
+
+  selectedSimSkills.clear();
+
+  if (container) {
+    container.innerHTML = "";
+    const candidateCurrent = new Set(currentProfile ? currentProfile.skills || [] : []);
+    const targetSkills = [...(job.missing_skills || []), ...(job.required_skills || [])];
+
+    const extraPool = ["Docker", "AWS", "Kubernetes", "PyTorch", "FastAPI", "PostgreSQL", "MLOps"];
+    extraPool.forEach(sk => {
+      if (!candidateCurrent.has(sk) && !targetSkills.includes(sk)) {
+        targetSkills.push(sk);
+      }
+    });
+
+    targetSkills.forEach(skill => {
+      if (candidateCurrent.has(skill)) return;
+      const label = document.createElement("label");
+      label.className = "checkbox-item";
+      label.innerHTML = `
+        <input type="checkbox" value="${skill}" onchange="toggleSimSkill('${skill}')">
+        <span>+ ${skill}</span>
+      `;
+      container.appendChild(label);
+    });
+  }
+}
+
+async function roadmapLiveJob(jobId) {
+  const job = liveJobsData.find(j => j.id === jobId);
+  if (!job) return;
+
+  switchTab("tab-roadmap");
+
+  const roleEl = document.getElementById("roadmap-role-title");
+  if (roleEl) roleEl.innerText = `${job.title} @ ${job.company}`;
+
+  const missing = job.missing_skills && job.missing_skills.length > 0 ? job.missing_skills : (job.required_skills || ["Docker", "AWS", "PyTorch"]);
+
+  try {
+    const res = await fetch("/api/learning/roadmap", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        missing_skills: missing,
+        target_role: job.role || "Data Scientist"
+      })
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      renderRoadmap(data);
+    }
+  } catch (e) {
+    console.error("Roadmap generation failed for live job:", e);
+  }
+}
+
+function escapeHtml(text) {
+  if (!text) return "";
+  const map = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;"
+  };
+  return String(text).replace(/[&<>"']/g, m => map[m]);
 }
