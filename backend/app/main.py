@@ -16,6 +16,8 @@ from backend.app.ml.simulator import what_if_simulator
 from backend.app.ml.roadmap import roadmap_engine
 from backend.app.ml.copilot import career_copilot
 from backend.app.ml.job_fetcher import job_fetcher
+from backend.app.ml.portfolio_scanner import portfolio_scanner
+from backend.app.ml.resume_tailor import resume_tailor
 from backend.app.db.mongodb import db_manager
 
 app = FastAPI(
@@ -106,6 +108,21 @@ class LiveJobSearchRequest(BaseModel):
     portal_filter: str = "all"
     candidate: Optional[CandidateProfileModel] = None
     max_results: int = 25
+
+class ScanGithubRequest(BaseModel):
+    profile_url_or_username: str
+
+class TailorResumeRequest(BaseModel):
+    job_title: str
+    company: str
+    target_role: str = "Data Scientist"
+    required_skills: List[str] = []
+    missing_skills: List[str] = []
+    candidate_skills: List[str] = []
+
+class BenchmarkApplicantRequest(BaseModel):
+    ats_score: int = 80
+    target_role: str = "Data Scientist"
 
 @app.get("/api/health")
 def health_check():
@@ -383,9 +400,34 @@ def get_market_analytics():
     return trends
 
 @app.post("/api/copilot/chat")
-def copilot_chat(req: CopilotRequest):
-    response = career_copilot.answer_query(req.query, req.context)
+async def copilot_chat(req: CopilotRequest):
+    response = await career_copilot.answer_query(req.query, req.context)
     return {"reply": response}
+
+# ----------------- REAL-WORLD PROBLEM SOLVING ENGINES -----------------
+@app.post("/api/portfolio/scan-github")
+async def scan_github_portfolio(req: ScanGithubRequest):
+    try:
+        return await portfolio_scanner.scan_profile(req.profile_url_or_username)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to scan GitHub: {str(e)}")
+
+@app.post("/api/resume/tailor-bullets")
+def tailor_resume_bullets(req: TailorResumeRequest):
+    return resume_tailor.tailor_resume_bullets(
+        job_title=req.job_title,
+        company=req.company,
+        target_role=req.target_role,
+        required_skills=req.required_skills,
+        missing_skills=req.missing_skills,
+        candidate_skills=req.candidate_skills
+    )
+
+@app.post("/api/analytics/benchmark-applicant")
+def benchmark_applicant(req: BenchmarkApplicantRequest):
+    return db_manager.calculate_cohort_percentile(req.ats_score, req.target_role)
 
 STATIC_DIR = Path(__file__).parent / "static"
 app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")

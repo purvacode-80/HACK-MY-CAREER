@@ -13,6 +13,7 @@ let selectedSimSkills = new Set();
 let customJobMatch = null;
 let customJobObj = null;
 let liveJobsData = [];
+let selectedLiveJobId = null;
 
 // User Session State (MongoDB Atlas Authentication)
 let currentUser = null;
@@ -29,6 +30,9 @@ let clusterChartInstance = null;
 // =========================================================================
 document.addEventListener("DOMContentLoaded", async () => {
   try {
+    // 0. Initialize Light/Dark Theme
+    initTheme();
+
     // 1. Check & Initialize User Session
     initUserSession();
 
@@ -68,7 +72,7 @@ function initUserSession() {
       currentUser = JSON.parse(saved);
       // User is logged in: enter main dashboard
       gateway.style.display = "none";
-      dashboard.style.display = "block";
+      dashboard.style.display = "flex";
       updateUserHeaderUI();
       return;
     } catch (e) {
@@ -85,10 +89,14 @@ function initUserSession() {
 function updateUserHeaderUI() {
   const nameEl = document.getElementById("user-display-name");
   const avatarEl = document.getElementById("user-avatar-text");
+  const sidebarAvatar = document.getElementById("sidebar-user-avatar");
 
   if (currentUser) {
-    if (nameEl) nameEl.innerText = currentUser.name || "Candidate";
-    if (avatarEl) avatarEl.innerText = (currentUser.name || "U")[0].toUpperCase();
+    const displayName = currentUser.name || "Candidate";
+    const initial = (currentUser.name || "U")[0].toUpperCase();
+    if (nameEl) nameEl.innerText = displayName;
+    if (avatarEl) avatarEl.innerText = initial;
+    if (sidebarAvatar) sidebarAvatar.innerText = initial;
   }
 }
 
@@ -331,6 +339,23 @@ function switchTab(tabId) {
   );
   if (matchingBtn) matchingBtn.classList.add("active");
 
+  // Sync breadcrumb title in topbar
+  const titles = {
+    "tab-resume": "Resume Intelligence & ATS",
+    "tab-matching": "Job Matching & Skill Gap",
+    "tab-live-jobs": "Real-World Live Jobs",
+    "tab-simulator": "What-If Simulator",
+    "tab-roadmap": "Learning Roadmap",
+    "tab-market": "Market Analytics & Clusters",
+    "tab-history": "Saved Resumes (Atlas)"
+  };
+  const titleEl = document.getElementById("topbar-current-tab");
+  if (titleEl && titles[tabId]) titleEl.innerText = titles[tabId];
+
+  // Close mobile sidebar if open
+  const sidebar = document.getElementById("sidebar-nav");
+  if (sidebar) sidebar.classList.remove("mobile-open");
+
   if (tabId === "tab-market") {
     setTimeout(renderMarketCharts, 100);
   }
@@ -468,6 +493,39 @@ function setCandidateProfile(profile) {
     circle.style.strokeDashoffset = offset;
   }
 
+  // 8b. Update ATS Completeness Health badge & metric bars
+  const atsBadge = document.getElementById("ats-badge");
+  if (atsBadge) {
+    atsBadge.textContent = `${ats}/100`;
+    atsBadge.className = ats >= 75 ? "badge badge-matched" : ats >= 50 ? "badge badge-missing" : "badge badge-neutral";
+  }
+
+  // Contact & Links Integrity — score based on email + phone + linkedin presence
+  const hasEmail = !!(profile.email || (profile.contact && profile.contact.email));
+  const hasPhone = !!(profile.phone || (profile.contact && profile.contact.phone));
+  const hasLinkedin = !!(profile.linkedin || (profile.contact && profile.contact.linkedin));
+  const contactScore = Math.round(((hasEmail ? 40 : 0) + (hasPhone ? 30 : 0) + (hasLinkedin ? 30 : 0)));
+  const contactValEl = document.getElementById("metric-contact-val");
+  const contactBarEl = document.getElementById("metric-contact-bar");
+  if (contactValEl) contactValEl.textContent = `${contactScore}%`;
+  if (contactBarEl) contactBarEl.style.width = `${contactScore}%`;
+
+  // Extracted Skills Density — based on number of skills detected
+  const skillCount = (profile.skills || []).length;
+  const skillScore = Math.min(100, Math.round(skillCount * 6));
+  const skillValEl = document.getElementById("metric-skills-val");
+  const skillBarEl = document.getElementById("metric-skills-bar");
+  if (skillValEl) skillValEl.textContent = `${skillCount} skills (${skillScore}%)`;
+  if (skillBarEl) skillBarEl.style.width = `${skillScore}%`;
+
+  // Project Depth & Technical Validation — based on projects count
+  const projCount = (profile.projects || []).length;
+  const projScore = Math.min(100, Math.round(projCount * 20));
+  const projValEl = document.getElementById("metric-proj-val");
+  const projBarEl = document.getElementById("metric-proj-bar");
+  if (projValEl) projValEl.textContent = `${projCount} projects (${projScore}%)`;
+  if (projBarEl) projBarEl.style.width = `${projScore}%`;
+
   // 9. Re-run Match Engine with new Profile
   runJobMatching();
 }
@@ -500,6 +558,11 @@ async function handleFileUpload(event) {
 
     const parsedProfile = await res.json();
     setCandidateProfile(parsedProfile);
+
+    // Update Cohort Benchmark widget with new ATS score
+    const atsScore = parsedProfile.ats_score || parsedProfile.match_score || 70;
+    const targetRole = parsedProfile.target_role || parsedProfile.primary_role || "Data Scientist";
+    updateCohortBenchmark(atsScore, targetRole);
 
     // Refresh user's saved resumes from MongoDB Atlas
     if (currentUser) {
@@ -688,7 +751,7 @@ function renderRankedJobs() {
         </div>
         <div class="job-match-pill">${item.overall_match_score}%</div>
       </div>
-      <div style="font-size:0.75rem; color:#818cf8; margin-top:0.25rem;">
+      <div class="job-meta-scores">
         Semantic: ${item.dense_semantic_score}% | Direct Skills: ${item.breakdown.skill_match}%
       </div>
     `;
@@ -825,6 +888,50 @@ async function toggleSimSkill(skill, isChecked) {
 // =========================================================================
 // 8. PERSONALIZED LEARNING ROADMAP
 // =========================================================================
+function renderRoadmap(data) {
+  if (!data) return;
+  const hoursBadge = document.getElementById("roadmap-hours-badge");
+  if (hoursBadge) {
+    hoursBadge.innerText = `${data.total_estimated_hours || 40} Total Hours • ${data.estimated_completion_weeks || 4} Weeks`;
+  }
+  
+  const container = document.getElementById("roadmap-timeline");
+  if (!container) return;
+  container.innerHTML = "";
+
+  const steps = data.steps || [];
+  if (steps.length === 0) {
+    container.innerHTML = `<div style="text-align:center; padding:2rem; color:var(--text-muted);">No roadmap steps generated for this role.</div>`;
+    return;
+  }
+
+  steps.forEach(step => {
+    const stepDiv = document.createElement("div");
+    stepDiv.className = "timeline-step";
+    stepDiv.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+        <strong class="timeline-step-title">Step ${step.step_number}: Master ${escapeHtml(step.skill)}</strong>
+        <span class="badge badge-neutral">${escapeHtml(step.difficulty || "Intermediate")} • ${step.estimated_hours || 10} Hours</span>
+      </div>
+      <p class="timeline-step-summary">${escapeHtml(step.summary || "")}</p>
+      
+      <div class="timeline-step-heading">KEY MILESTONES:</div>
+      <ul class="timeline-milestones-list">
+        ${(step.milestones || []).map(m => `<li>${escapeHtml(m)}</li>`).join("")}
+      </ul>
+
+      <div class="timeline-capstone-box">
+        <strong style="color:var(--success);">💡 Capstone Project Idea:</strong> ${escapeHtml(step.project_idea || "")}
+      </div>
+
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        ${(step.tutorials || []).map(t => `<a href="${t.url}" target="_blank" class="sample-btn timeline-tutorial-link" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;">🔗 ${escapeHtml(t.title)}</a>`).join("")}
+      </div>
+    `;
+    container.appendChild(stepDiv);
+  });
+}
+
 async function openRoadmapForJob() {
   if (!selectedJobMatch) return;
   switchTab("tab-roadmap");
@@ -846,36 +953,7 @@ async function openRoadmapForJob() {
 
   if (res.ok) {
     const data = await res.json();
-    document.getElementById("roadmap-hours-badge").innerText = `${data.total_estimated_hours} Total Hours • ${data.estimated_completion_weeks} Weeks`;
-    
-    const container = document.getElementById("roadmap-timeline");
-    container.innerHTML = "";
-
-    data.steps.forEach(step => {
-      const stepDiv = document.createElement("div");
-      stepDiv.className = "timeline-step";
-      stepDiv.innerHTML = `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-          <strong style="color:#818cf8; font-size:1.05rem;">Step ${step.step_number}: Master ${step.skill}</strong>
-          <span class="badge badge-neutral">${step.difficulty} • ${step.estimated_hours} Hours</span>
-        </div>
-        <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:0.75rem;">${step.summary}</p>
-        
-        <div style="font-size:0.8rem; font-weight:700; color:#cbd5e1; margin-bottom:0.3rem;">KEY MILESTONES:</div>
-        <ul style="padding-left:1.25rem; font-size:0.8rem; color:var(--text-muted); margin-bottom:0.75rem;">
-          ${step.milestones.map(m => `<li>${m}</li>`).join("")}
-        </ul>
-
-        <div style="background:rgba(255,255,255,0.03); padding:0.6rem; border-radius:var(--radius-sm); font-size:0.8rem; margin-bottom:0.6rem;">
-          <strong style="color:#34d399;">💡 Capstone Project Idea:</strong> ${step.project_idea}
-        </div>
-
-        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-          ${step.tutorials.map(t => `<a href="${t.url}" target="_blank" class="sample-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;">🔗 ${t.title}</a>`).join("")}
-        </div>
-      `;
-      container.appendChild(stepDiv);
-    });
+    renderRoadmap(data);
   }
 }
 
@@ -1121,11 +1199,68 @@ function renderMarketCharts() {
 }
 
 // =========================================================================
-// 11. CAREER COPILOT AI CHAT
+// 11. CAREER COPILOT AI CHAT (RIGHT SIDEBAR DRAWER)
 // =========================================================================
 function toggleChat() {
   const drawer = document.getElementById("chat-drawer");
-  drawer.style.display = drawer.style.display === "flex" ? "none" : "flex";
+  const backdrop = document.getElementById("chat-backdrop");
+  if (!drawer) return;
+  const isOpen = drawer.classList.contains("open");
+  if (isOpen) {
+    drawer.classList.remove("open");
+    if (backdrop) backdrop.classList.remove("open");
+  } else {
+    drawer.classList.add("open");
+    if (backdrop) backdrop.classList.add("open");
+    const input = document.getElementById("chat-input");
+    if (input) setTimeout(() => input.focus(), 250);
+  }
+}
+
+function toggleMobileSidebar() {
+  const sidebar = document.getElementById("sidebar-nav");
+  if (sidebar) sidebar.classList.toggle("mobile-open");
+}
+
+function toggleGeminiKeyInput() {
+  const box = document.getElementById("gemini-key-box");
+  if (!box) return;
+  const isHidden = box.style.display === "none";
+  box.style.display = isHidden ? "block" : "none";
+  if (isHidden) {
+    const input = document.getElementById("gemini-key-input");
+    if (input) {
+      input.value = localStorage.getItem("hmc_gemini_key") || "";
+      input.focus();
+    }
+  }
+}
+
+function saveGeminiKey() {
+  const input = document.getElementById("gemini-key-input");
+  if (!input) return;
+  const key = input.value.trim();
+  if (key) {
+    localStorage.setItem("hmc_gemini_key", key);
+    showToast("Gemini API key saved!", "success");
+    const ind = document.getElementById("copilot-model-indicator");
+    if (ind) ind.innerText = "⚡ Gemini 1.5 Flash Connected";
+  } else {
+    localStorage.removeItem("hmc_gemini_key");
+    showToast("Cleared Gemini key. Using Smart Advisor.", "info");
+    const ind = document.getElementById("copilot-model-indicator");
+    if (ind) ind.innerText = "⚡ Smart Career Advisor Ready";
+  }
+  const box = document.getElementById("gemini-key-box");
+  if (box) box.style.display = "none";
+}
+
+function askPreset(text) {
+  const input = document.getElementById("chat-input");
+  if (input) {
+    input.value = text;
+    sendChatMessage();
+  }
 }
 
 async function sendChatMessage() {
@@ -1144,9 +1279,11 @@ async function sendChatMessage() {
 
   const botDiv = document.createElement("div");
   botDiv.className = "chat-msg bot";
-  botDiv.innerText = "Analyzing career context...";
+  botDiv.innerHTML = "<em>Analyzing career context & market data...</em>";
   msgs.appendChild(botDiv);
   msgs.scrollTop = msgs.scrollHeight;
+
+  const savedGeminiKey = localStorage.getItem("hmc_gemini_key") || "";
 
   try {
     const res = await fetch("/api/copilot/chat", {
@@ -1155,16 +1292,25 @@ async function sendChatMessage() {
       body: JSON.stringify({
         query: query,
         context: {
-          candidate: currentProfile,
+          candidate: currentProfile || {},
           target_job: selectedJobMatch || {},
-          match_info: selectedJobMatch || {}
+          match_info: selectedJobMatch || {},
+          gemini_api_key: savedGeminiKey
         }
       })
     });
 
     if (res.ok) {
       const data = await res.json();
-      botDiv.innerHTML = data.reply.replace(/\n/g, "<br>").replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+      let replyHtml = (data.reply || "")
+        .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+        .replace(/^## (.*$)/gim, '<h3>$1</h3>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/`([^`]+)`/g, '<code>$1</code>')
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:var(--primary-light);font-weight:700;text-decoration:underline;">$1 ➔</a>')
+        .replace(/\n/g, '<br>');
+
+      botDiv.innerHTML = replyHtml;
     } else {
       botDiv.innerText = "Sorry, I had trouble answering that. Please try again.";
     }
@@ -1172,6 +1318,40 @@ async function sendChatMessage() {
     botDiv.innerText = "Network error connecting to Copilot API.";
   }
   msgs.scrollTop = msgs.scrollHeight;
+}
+
+// =========================================================================
+// THEME MANAGEMENT (LIGHT / DARK THEME)
+// =========================================================================
+function initTheme() {
+  const saved = localStorage.getItem("hmc_theme") || "dark";
+  if (saved === "light") {
+    document.body.classList.add("light-theme");
+  } else {
+    document.body.classList.remove("light-theme");
+  }
+  updateThemeUI(saved);
+}
+
+function toggleTheme() {
+  const isLight = document.body.classList.toggle("light-theme");
+  const theme = isLight ? "light" : "dark";
+  localStorage.setItem("hmc_theme", theme);
+  updateThemeUI(theme);
+}
+
+function updateThemeUI(theme) {
+  const isLight = theme === "light";
+  const icon = isLight ? "☀️" : "🌙";
+  const label = isLight ? "Light Mode" : "Dark Mode";
+
+  const btnIcon = document.getElementById("theme-btn-icon");
+  const btnText = document.getElementById("theme-btn-text");
+  const topIcon = document.getElementById("topbar-theme-icon");
+
+  if (btnIcon) btnIcon.innerText = icon;
+  if (btnText) btnText.innerText = label;
+  if (topIcon) topIcon.innerText = icon;
 }
 
 // =========================================================================
@@ -1293,7 +1473,7 @@ function renderLiveJobs(jobs) {
           <span>🎯</span>
           <span>${s.toFixed(1)}% Match</span>
         </div>
-        <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">
+        <span class="live-score-formula-label">
           5-Factor Composite
         </span>
       `;
@@ -1403,6 +1583,9 @@ function renderLiveJobs(jobs) {
           <button class="btn-job-action-sm" onclick="roadmapLiveJob('${job.id}')" title="Generate learning curriculum">
             🗺️ Roadmap
           </button>
+          <button class="btn-job-action-sm" onclick="openResumeTailorForLiveJob('${job.id}')" title="Generate AI-tailored resume bullets for this role" style="background:rgba(236,72,153,0.14);border-color:rgba(236,72,153,0.35);color:#f9a8d4;">
+            ✨ AI Tailor
+          </button>
         </div>
       </div>
     `;
@@ -1435,11 +1618,17 @@ function simulateLiveJob(jobId) {
   if (container) {
     container.innerHTML = "";
     const candidateCurrent = new Set(currentProfile ? currentProfile.skills || [] : []);
-    const targetSkills = [...(job.missing_skills || []), ...(job.required_skills || [])];
+    // Use a Set to deduplicate — missing_skills and required_skills often overlap
+    const seenSkills = new Set();
+    const targetSkills = [];
+    [...(job.missing_skills || []), ...(job.required_skills || [])].forEach(sk => {
+      if (!seenSkills.has(sk)) { seenSkills.add(sk); targetSkills.push(sk); }
+    });
 
     const extraPool = ["Docker", "AWS", "Kubernetes", "PyTorch", "FastAPI", "PostgreSQL", "MLOps"];
     extraPool.forEach(sk => {
-      if (!candidateCurrent.has(sk) && !targetSkills.includes(sk)) {
+      if (!candidateCurrent.has(sk) && !seenSkills.has(sk)) {
+        seenSkills.add(sk);
         targetSkills.push(sk);
       }
     });
@@ -1497,4 +1686,350 @@ function escapeHtml(text) {
     "'": "&#039;"
   };
   return String(text).replace(/[&<>"']/g, m => map[m]);
+}
+
+// =========================================================================
+// REAL-WORLD FEATURE 1: GITHUB PORTFOLIO CODE EVIDENCE SCANNER
+// =========================================================================
+async function scanGitHubPortfolio() {
+  const input = document.getElementById("github-username-input");
+  const btn   = document.getElementById("btn-scan-github");
+  const badge = document.getElementById("github-verify-badge");
+  const container = document.getElementById("github-results-container");
+
+  if (!input || !input.value.trim()) {
+    showToast("⚠️ Please enter a GitHub username or URL", "warning");
+    return;
+  }
+
+  const username = input.value.trim();
+  btn.disabled = true;
+  btn.innerHTML = `<span>⏳ Scanning Code Evidence…</span>`;
+  badge.textContent = "Scanning…";
+  badge.className = "badge badge-neutral";
+
+  try {
+    const res = await fetch("/api/portfolio/scan-github", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ profile_url_or_username: username })
+    });
+
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+
+    badge.textContent = `Score ${data.evidence_score}/100`;
+    badge.className = data.evidence_score >= 70
+      ? "badge badge-matched"
+      : data.evidence_score >= 40
+        ? "badge badge-missing"
+        : "badge badge-neutral";
+
+    container.style.display = "block";
+    container.innerHTML = renderGitHubResults(data);
+
+  } catch(e) {
+    console.error("GitHub scan error:", e);
+    badge.textContent = "Scan Failed";
+    badge.className = "badge badge-missing";
+    container.style.display = "block";
+    container.innerHTML = `<div style="color:#fca5a5; font-size:0.85rem; padding:0.75rem;">
+      ⚠️ Could not scan GitHub profile. Check username or network and try again.
+    </div>`;
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = `<span>⚡ Verify Code Evidence</span>`;
+  }
+}
+
+function renderGitHubResults(data) {
+  // Backend returns: top_languages (array), verified_skills (array of objects), repo_highlights (array)
+  const topLangs = data.top_languages || [];       // [{language, repos}]
+  const verified = data.verified_skills || [];      // [{skill, evidence_type, repo_count, confidence}]
+  const repos = data.repo_highlights || [];         // top repos
+  const totalStars = data.total_stars || 0;
+  const repoCount = data.public_repos_count || data.public_repo_count || 0;
+  const scoreColor = data.evidence_score >= 70 ? "#34d399" : data.evidence_score >= 40 ? "#f59e0b" : "#ef4444";
+
+  // Language bars — from top_languages array
+  const langMax = Math.max(...topLangs.map(l => l.repos || 0), 1);
+  const langBars = topLangs.slice(0, 6).map(l => `
+    <div class="github-lang-bar-wrap">
+      <div class="github-lang-bar-label">
+        <span>${escapeHtml(l.language)}</span><span>${l.repos} repo${l.repos !== 1 ? 's' : ''}</span>
+      </div>
+      <div class="github-lang-bar-bg">
+        <div class="github-lang-bar-fill" style="width:${Math.round((l.repos/langMax)*100)}%"></div>
+      </div>
+    </div>
+  `).join("");
+
+  // Verified skill badges — extract .skill string from objects
+  const skillBadges = verified.map(sk => {
+    const skillName = typeof sk === "object" ? (sk.skill || String(sk)) : String(sk);
+    const conf = typeof sk === "object" && sk.confidence ? ` (${sk.confidence}%)` : "";
+    return `<span class="github-verified-tag" title="${escapeHtml(sk.evidence_type || 'Code Evidence')}${conf}">✅ ${escapeHtml(skillName)}</span>`;
+  }).join(" ");
+
+  // Top repo cards — from repo_highlights
+  const repoCards = repos.slice(0, 6).map(r => `
+    <div class="github-repo-card">
+      <div class="github-repo-name" title="${escapeHtml(r.name)}">
+        📁 ${escapeHtml(r.name)}
+      </div>
+      <div class="github-repo-meta">
+        <span>⭐ ${r.stars || 0}</span>
+        <span>${escapeHtml(r.language || "—")}</span>
+        ${r.updated_at ? `<span>${r.updated_at}</span>` : ""}
+      </div>
+      ${r.description && r.description !== "No description provided" ? `<div style="font-size:0.74rem; color:var(--text-muted); margin-top:0.3rem;">${escapeHtml(r.description.slice(0,80))}${r.description.length>80?"…":""}</div>` : ""}
+    </div>
+  `).join("");
+
+  return `
+    <!-- Summary Stats -->
+    <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:1.25rem; align-items:center;">
+      <div class="github-stat-pill">
+        <span style="font-size:1.1rem; font-weight:900; color:${scoreColor};">${data.evidence_score}</span>
+        <span>/ 100 Score</span>
+      </div>
+      <div class="github-stat-pill">📁 ${repoCount} Public Repos</div>
+      <div class="github-stat-pill">⭐ ${totalStars} Stars</div>
+      <div class="github-stat-pill">✅ ${verified.length} Skills Verified</div>
+    </div>
+
+    <!-- Verified Skills -->
+    ${verified.length > 0 ? `
+    <div style="margin-bottom:1.25rem;">
+      <div style="font-size:0.78rem; font-weight:700; color:#a5b4fc; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.5rem;">
+        ✅ Code-Verified Skills
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">${skillBadges}</div>
+    </div>` : ""}
+
+    <!-- Language Breakdown -->
+    ${langBars ? `
+    <div style="margin-bottom:1.25rem;">
+      <div style="font-size:0.78rem; font-weight:700; color:#a5b4fc; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.65rem;">
+        📊 Language Distribution
+      </div>
+      ${langBars}
+    </div>` : ""}
+
+    <!-- Top Repos -->
+    ${repos.length > 0 ? `
+    <div>
+      <div style="font-size:0.78rem; font-weight:700; color:#a5b4fc; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.65rem;">
+        🏆 Top Repositories
+      </div>
+      <div class="github-results-grid">${repoCards}</div>
+    </div>` : ""}
+  `;
+}
+
+// =========================================================================
+// REAL-WORLD FEATURE 2: AI RESUME TAILOR MODAL
+// =========================================================================
+let _tailorBulletsCache = [];
+
+async function openResumeTailorForSelectedJob() {
+  const selected = liveJobsData && liveJobsData.length > 0
+    ? liveJobsData.find(j => j.id === selectedLiveJobId) || liveJobsData[0]
+    : null;
+
+  const jobTitle   = selected ? selected.title   : (document.getElementById("job-title-output")  ?.innerText || "Data Scientist");
+  const company    = selected ? selected.company  : (document.getElementById("job-company-output")?.innerText || "Target Company");
+  const reqSkills  = selected ? (selected.required_skills || []) : [];
+  const missSkills = selected ? (selected.missing_skills  || []) : [];
+  const candSkills = currentProfile ? (currentProfile.skills || []) : [];
+
+  openResumeTailorModal(jobTitle, company, reqSkills, missSkills, candSkills);
+}
+
+async function openResumeTailorForLiveJob(jobId) {
+  const job = liveJobsData && liveJobsData.find(j => j.id === jobId);
+  if (!job) return;
+
+  openResumeTailorModal(
+    job.title, job.company,
+    job.required_skills || [],
+    job.missing_skills  || [],
+    currentProfile ? (currentProfile.skills || []) : []
+  );
+}
+
+async function openResumeTailorModal(jobTitle, company, reqSkills, missSkills, candSkills) {
+  const modal = document.getElementById("resume-tailor-modal");
+  if (!modal) return;
+
+  // Reset & show
+  document.getElementById("tailor-modal-title").textContent = `AI Optimizer: ${jobTitle}`;
+  document.getElementById("tailor-modal-subtitle").textContent = `Tailored STAR bullets for ${company} — bridging your skill gaps`;
+  document.getElementById("tailor-modal-meta").textContent    = `${jobTitle} @ ${company}`;
+  document.getElementById("tailor-uplift-badge").textContent  = "+??%";
+  document.getElementById("tailor-bullets-container").innerHTML = `
+    <div style="color:var(--text-muted); font-size:0.85rem; padding:1rem; text-align:center;">
+      ⏳ Generating AI bullets…
+    </div>`;
+  document.getElementById("tailor-keywords-list").innerHTML = "";
+  document.getElementById("tailor-verbs-list").innerHTML    = "";
+  modal.style.display = "flex";
+  _tailorBulletsCache = [];
+
+  try {
+    const res = await fetch("/api/resume/tailor-bullets", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        job_title: jobTitle,
+        company: company,
+        target_role: jobTitle,
+        required_skills: reqSkills,
+        missing_skills:  missSkills,
+        candidate_skills: candSkills
+      })
+    });
+
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+    renderTailoredBullets(data);
+
+  } catch(e) {
+    console.error("Resume tailor error:", e);
+    document.getElementById("tailor-bullets-container").innerHTML = `
+      <div style="color:#fca5a5; font-size:0.85rem; padding:0.75rem;">
+        ⚠️ Could not generate bullets. Check server and try again.
+      </div>`;
+  }
+}
+
+function renderTailoredBullets(data) {
+  // Backend returns: generated_bullets[{skill, bullet, is_gap_skill}], projected_ats_uplift, top_resume_keywords
+  _tailorBulletsCache = data.generated_bullets || data.bullets || [];
+  const container = document.getElementById("tailor-bullets-container");
+  const upliftEl  = document.getElementById("tailor-uplift-badge");
+
+  // Show projected uplift from backend
+  const uplift = data.projected_ats_uplift || "+?%";
+  if (upliftEl) upliftEl.textContent = uplift;
+
+  if (_tailorBulletsCache.length === 0) {
+    container.innerHTML = `<div style="color:var(--text-muted); padding:0.75rem; font-size:0.85rem;">No tailored bullets generated. Please try selecting a specific job first.</div>`;
+    return;
+  }
+
+  // Render bullet cards — field is 'bullet', not 'bullet_text'
+  container.innerHTML = _tailorBulletsCache.map((b, i) => {
+    const text = b.bullet || b.bullet_text || "";
+    const isGap = b.is_gap_skill ? " 🎯 Gap Skill" : "";
+    return `
+      <div class="tailor-bullet-card">
+        <div class="tailor-bullet-text">${escapeHtml(text)}</div>
+        <span class="bullet-uplift-tag">${escapeHtml(b.skill || "")}${isGap}</span>
+        <button class="btn-copy-bullet" onclick="copyBullet(${i})">📋 Copy</button>
+      </div>
+    `;
+  }).join("");
+
+  // Keywords — backend field is top_resume_keywords
+  const kwList = document.getElementById("tailor-keywords-list");
+  const keywords = data.top_resume_keywords || data.critical_keywords || [];
+  if (kwList && keywords.length > 0) {
+    kwList.innerHTML = keywords.map(k =>
+      `<span class="badge badge-matched" style="font-size:0.72rem; margin:0.2rem;">${escapeHtml(k)}</span>`
+    ).join("");
+  } else if (kwList) {
+    kwList.innerHTML = `<span style="color:var(--text-muted); font-size:0.8rem;">No keywords extracted</span>`;
+  }
+
+  // Verbs
+  const vbList = document.getElementById("tailor-verbs-list");
+  if (vbList && data.recommended_action_verbs && data.recommended_action_verbs.length > 0) {
+    vbList.innerHTML = data.recommended_action_verbs.map(v =>
+      `<span class="badge badge-neutral" style="font-size:0.72rem; margin:0.2rem; background:rgba(139,92,246,0.18); border-color:rgba(139,92,246,0.35); color:#c084fc;">${escapeHtml(v)}</span>`
+    ).join("");
+  }
+}
+
+function copyBullet(index) {
+  const bullet = _tailorBulletsCache[index];
+  if (!bullet) return;
+  const text = bullet.bullet || bullet.bullet_text || "";
+  navigator.clipboard.writeText(text).then(() => {
+    showToast("\ud83d\udccb Bullet copied to clipboard!");
+  });
+}
+
+function copyAllTailoredBullets() {
+  if (!_tailorBulletsCache.length) { showToast("\u26a0\ufe0f No bullets to copy", "warning"); return; }
+  const text = _tailorBulletsCache.map((b, i) => `${i+1}. ${b.bullet || b.bullet_text || ""}`).join("\n\n");
+  navigator.clipboard.writeText(text).then(() => {
+    showToast(`\ud83d\udccb All ${_tailorBulletsCache.length} bullets copied!`);
+  });
+}
+
+function closeResumeTailorModal() {
+  const modal = document.getElementById("resume-tailor-modal");
+  if (modal) modal.style.display = "none";
+}
+
+// Close modal on backdrop click
+document.addEventListener("click", (e) => {
+  if (e.target && e.target.id === "resume-tailor-modal") closeResumeTailorModal();
+});
+
+// =========================================================================
+// REAL-WORLD FEATURE 3: COHORT PERCENTILE BENCHMARK UPDATER
+// =========================================================================
+async function updateCohortBenchmark(atsScore, targetRole) {
+  const badge   = document.getElementById("cohort-rank-badge");
+  const numEl   = document.getElementById("cohort-percentile-num");
+  if (!badge || !numEl) return;
+
+  try {
+    const res = await fetch("/api/analytics/benchmark-applicant", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ats_score: atsScore, target_role: targetRole || "Data Scientist" })
+    });
+
+    if (!res.ok) return;
+    const data = await res.json();
+    const pct  = data.percentile || 50;
+    const label = data.rank_label || "Developing";
+
+    numEl.textContent = `${pct.toFixed(1)}%`;
+
+    if (pct >= 75) {
+      badge.textContent = `Top ${(100 - pct).toFixed(0)}% Exceptional`;
+      badge.className   = "badge cohort-rank-label cohort-rank-exceptional";
+    } else if (pct >= 45) {
+      badge.textContent = `Top ${(100 - pct).toFixed(0)}% Competitive`;
+      badge.className   = "badge cohort-rank-label cohort-rank-competitive";
+    } else {
+      badge.textContent = `Developing`;
+      badge.className   = "badge cohort-rank-label cohort-rank-developing";
+    }
+  } catch(e) {
+    console.warn("Cohort benchmark update skipped:", e);
+  }
+}
+
+// =========================================================================
+// SHARED UTILITY: TOAST NOTIFICATION
+// =========================================================================
+function showToast(message, type = "success") {
+  // Remove any existing toast
+  const existing = document.querySelector(".toast-notification");
+  if (existing) existing.remove();
+
+  const toast = document.createElement("div");
+  toast.className = "toast-notification";
+  toast.style.cssText = type === "warning"
+    ? "background:linear-gradient(135deg,#f59e0b,#d97706);"
+    : "";
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  setTimeout(() => { if (toast.parentNode) toast.remove(); }, 2700);
 }

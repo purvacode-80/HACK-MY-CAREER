@@ -19,6 +19,7 @@ class RealWorldJobFetcher:
         self.adzuna_app_id = os.getenv("ADZUNA_APP_ID", "")
         self.adzuna_app_key = os.getenv("ADZUNA_APP_KEY", "")
         self.rapidapi_key = os.getenv("RAPIDAPI_KEY", "")
+        self.jooble_api_key = os.getenv("JOOBLE_API_KEY", "")
 
     @staticmethod
     def build_live_apply_url(source: str, title: str, company: str, location: str = "") -> str:
@@ -53,13 +54,22 @@ class RealWorldJobFetcher:
     ) -> List[Dict[str, Any]]:
         """
         Main entry point for fetching real-world jobs.
-        Tries live APIs first if configured, then falls back to/supplements with
-        actual curated listings from Naukri, LinkedIn, and Indeed.
+        Tries free live APIs (Remotive, Arbeitnow, Adzuna, Jooble, JSearch) and
+        seamlessly augments with curated live market listings with direct active portal links.
         """
         jobs: List[Dict[str, Any]] = []
 
-        # 1. Try Adzuna API if keys are present
-        if self.adzuna_app_id and self.adzuna_app_key:
+        # 1. Try Jooble API if key configured (free 500-1000 calls/day)
+        if self.jooble_api_key:
+            try:
+                jooble_jobs = await self._fetch_jooble(query, location, max_results)
+                if jooble_jobs:
+                    jobs.extend(jooble_jobs)
+            except Exception as e:
+                print(f"[JobFetcher] Jooble API fetch error: {e}")
+
+        # 2. Try Adzuna API if keys are present (subject to 25 or 1000 limit)
+        if len(jobs) < max_results and self.adzuna_app_id and self.adzuna_app_key:
             try:
                 adzuna_jobs = await self._fetch_adzuna(query, location, max_results)
                 if adzuna_jobs:
@@ -67,18 +77,27 @@ class RealWorldJobFetcher:
             except Exception as e:
                 print(f"[JobFetcher] Adzuna API fetch failed or rate-limited: {e}")
 
-        # 2. Try JSearch RapidAPI if key is present
-        if not jobs and self.rapidapi_key:
+        # 3. Try Remotive Free API (100% FREE, NO KEY NEEDED, Unlimited Tech & Data Jobs)
+        if len(jobs) < max_results:
+            try:
+                remotive_jobs = await self._fetch_remotive(query, location, max_results)
+                if remotive_jobs:
+                    jobs.extend(remotive_jobs)
+            except Exception as e:
+                print(f"[JobFetcher] Remotive Free API fetch error: {e}")
+
+        # 4. Try JSearch RapidAPI if key is present
+        if len(jobs) < max_results and self.rapidapi_key:
             try:
                 jsearch_jobs = await self._fetch_jsearch(query, location, max_results)
                 if jsearch_jobs:
                     jobs.extend(jsearch_jobs)
             except Exception as e:
-                print(f"[JobFetcher] JSearch API fetch failed or rate-limited: {e}")
+                print(f"[JobFetcher] JSearch API fetch error: {e}")
 
-        # 3. If no live API configured or API returned empty/failed, use our Real-World Portal Feed
-        if not jobs:
-            jobs = self._get_real_world_market_jobs(query, location, portal_filter)
+        # 5. Always ensure rich, real-world Indian Tech Hub market listings (Naukri, Indeed, LinkedIn)
+        market_jobs = self._get_real_world_market_jobs(query, location, portal_filter)
+        jobs.extend(market_jobs)
 
         # 4. Filter by portal if requested and not "all"
         if portal_filter and portal_filter.lower() != "all":
@@ -209,6 +228,97 @@ class RealWorldJobFetcher:
                 "source_badge": f"💼 {publisher}",
                 "min_experience_years": 1.5,
                 "education": "Degree in Computer Science or related STEM field",
+                "required_skills": [],
+                "preferred_skills": []
+            })
+        return results
+
+    async def _fetch_remotive(self, query: str, location: str, max_results: int) -> List[Dict[str, Any]]:
+        """
+        100% Free Live Remote & Tech Job Aggregator (No API Key Required).
+        Fetches active real listings with direct application links.
+        """
+        clean_q = query.strip() or "developer"
+        url = f"https://remotive.com/api/remote-jobs?search={urllib.parse.quote(clean_q)}&limit={min(max_results, 30)}"
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+
+        async with httpx.AsyncClient(timeout=8.0) as client:
+            resp = await client.get(url, headers=headers)
+            if resp.status_code != 200:
+                return []
+            data = resp.json()
+
+        results = []
+        for item in data.get("jobs", [])[:max_results]:
+            title = item.get("title", "Software Engineer")
+            company = item.get("company_name", "Global Tech Company")
+            loc = item.get("candidate_required_location") or location or "Worldwide / India"
+            url_apply = item.get("url") or self.build_live_apply_url("LinkedIn", title, company, loc)
+            salary = item.get("salary") or "Competitive / Industry Standard"
+            desc = re.sub(r"<[^>]+>", " ", item.get("description", ""))[:750].strip()
+
+            results.append({
+                "id": f"remotive-{item.get('id', '')}",
+                "title": title,
+                "company": company,
+                "location": loc,
+                "role": self._infer_role(title),
+                "salary_range": salary,
+                "description": desc,
+                "apply_url": url_apply,
+                "careers_url": f"https://www.google.com/search?q={urllib.parse.quote(company + ' careers')}",
+                "posted_at": item.get("publication_date", "Recently posted")[:10],
+                "source": "Remotive Live (Free)",
+                "source_badge": "🌐 Live Real-World Feed",
+                "min_experience_years": 1.0,
+                "education": "B.Tech / B.E. / BCA / MCA / M.Tech",
+                "required_skills": item.get("tags", [])[:5],
+                "preferred_skills": item.get("tags", [])[5:8]
+            })
+        return results
+
+    async def _fetch_jooble(self, query: str, location: str, max_results: int) -> List[Dict[str, Any]]:
+        """
+        Calls Jooble API for real-time live Indian job aggregation (500-1000 calls/day free tier).
+        """
+        if not self.jooble_api_key:
+            return []
+        url = f"https://jooble.org/api/{self.jooble_api_key}"
+        payload = {
+            "keywords": query or "Software Engineer",
+            "location": location or "India",
+            "page": 1
+        }
+        async with httpx.AsyncClient(timeout=8.0) as client:
+            resp = await client.post(url, json=payload)
+            if resp.status_code != 200:
+                return []
+            data = resp.json()
+
+        results = []
+        for item in data.get("jobs", [])[:max_results]:
+            title = item.get("title", "Tech Specialist")
+            company = item.get("company", "Tech Enterprise")
+            loc = item.get("location", location or "India")
+            salary = item.get("salary") or "₹8,00,000 - ₹18,00,000 P.A. (Estimated)"
+            link = item.get("link") or self.build_live_apply_url("Indeed", title, company, loc)
+            desc = re.sub(r"<[^>]+>", " ", item.get("snippet", ""))[:650].strip()
+
+            results.append({
+                "id": f"jooble-{item.get('id', '')}",
+                "title": title,
+                "company": company,
+                "location": loc,
+                "role": self._infer_role(title),
+                "salary_range": salary,
+                "description": desc,
+                "apply_url": link,
+                "careers_url": f"https://www.google.com/search?q={urllib.parse.quote(company + ' careers')}",
+                "posted_at": item.get("updated", "Recently active")[:10],
+                "source": "Jooble API Live",
+                "source_badge": "🟢 Verified Live Post",
+                "min_experience_years": 1.0,
+                "education": "Degree in Engineering / Technology",
                 "required_skills": [],
                 "preferred_skills": []
             })
